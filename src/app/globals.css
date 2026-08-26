@@ -12,7 +12,7 @@
   --color-border: #e7e1e6;
 
   --font-serif: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
-  --font-sans: var(--font-inter), "Inter", -apple-system, sans-serif;
+  --font-sans: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
 }
 
 @theme inline {

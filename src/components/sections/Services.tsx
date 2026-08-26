@@ -9,7 +9,7 @@ export function Services() {
         <div className="mb-16 grid grid-cols-1 gap-8 lg:mb-24 lg:grid-cols-12 lg:items-end lg:gap-16">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Meine Leistungen</span>
-            <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+            <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
               Für einen Blick, der{" "}
               <em className="text-orchid not-italic">für sich spricht</em>.
             </h2>
@@ -34,15 +34,15 @@ export function Services() {
               >
                 <Reveal
                   image
-                  className={`md:col-span-7 ${reversed ? "md:order-2 md:ml-auto" : ""}`}
+                  className={`md:col-span-7 ${reversed ? "md:order-2" : ""}`}
                 >
-                  <div className="group relative aspect-[5/4] w-full max-w-lg overflow-hidden bg-lilac/40">
+                  <div className="group relative aspect-[16/10] w-full overflow-hidden bg-lilac/40">
                     <Image
                       src={service.image}
                       alt={service.imageAlt}
                       fill
                       loading={index === 0 ? "eager" : "lazy"}
-                      sizes="(min-width: 768px) 32rem, 100vw"
+                      sizes="(min-width: 768px) 55vw, 100vw"
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

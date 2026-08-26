@@ -34,7 +34,7 @@ export function About() {
           <div className="lg:col-span-7">
             <Reveal>
               <span className="eyebrow">Ein paar Worte von mir</span>
-              <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
+              <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
                 Schönheit beginnt mit{" "}
                 <em className="text-orchid not-italic">Vertrauen</em>.
               </h2>

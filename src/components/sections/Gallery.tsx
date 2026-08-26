@@ -12,7 +12,7 @@ export function Gallery() {
             <span className="eyebrow">Meine Arbeiten</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="max-w-2xl font-serif text-[2.3rem] leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <h2 className="max-w-2xl font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
               Echte Ergebnisse, <em className="text-orchid not-italic">echte Blicke</em>.
             </h2>
           </Reveal>
@@ -49,7 +49,7 @@ export function Gallery() {
         <div className="mt-20 grid grid-cols-1 gap-10 md:mt-28 md:grid-cols-12 md:items-center md:gap-14">
           <Reveal className="md:col-span-5">
             <span className="eyebrow">Ein Ort zum Ankommen</span>
-            <h3 className="mt-5 max-w-[18ch] font-serif text-[2rem] leading-[1.15] tracking-tight text-ink md:text-4xl">
+            <h3 className="mt-5 max-w-[18ch] font-serif text-[2rem] leading-[1.15] tracking-[0.01em] text-ink md:text-4xl">
               Mehr als eine Behandlung —{" "}
               <em className="text-orchid not-italic">eine kleine Auszeit</em>.
             </h3>

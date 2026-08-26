@@ -23,7 +23,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={120}>
-              <h1 className="mt-7 font-serif text-[2.6rem] leading-[1.06] tracking-tight text-ink sm:text-[3.4rem] md:text-[3.9rem] lg:text-[4.4rem]">
+              <h1 className="mt-7 font-serif text-[2.6rem] leading-[1.06] tracking-[0.01em] text-ink sm:text-[3.4rem] md:text-[3.9rem] lg:text-[4.4rem]">
                 Ein Blick,
                 <br />
                 der <em className="text-orchid not-italic">bleibt</em>.

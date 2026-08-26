@@ -14,7 +14,7 @@ export const services: Service[] = [
     short: "Ausdrucksstark, individuell, langlebig.",
     description:
       "Für einen dauerhaft ausdrucksstarken Blick – individuell angepasst von natürlich bis voluminös. Angeboten werden die Techniken 1:1, 2D, Light Volume und Mega Volume.",
-    image: "/images/hero-eye.jpg",
+    image: "/images/lashextention.png",
     imageAlt: "Detailaufnahme einer Wimpernverlängerung",
   },
   {
@@ -23,7 +23,7 @@ export const services: Service[] = [
     short: "Die natürliche Alternative zu Extensions.",
     description:
       "Die perfekte Alternative zu Extensions. Ihre Naturwimpern werden sanft angehoben, erhalten einen wunderschönen Schwung und wirken optisch länger und voller. Inklusive Färben mit hochwertigen InLei-Produkten.",
-    image: "/images/lashlifting.jpg",
+    image: "/images/lashlisting.png",
     imageAlt: "Wimpern nach einem Lash Lifting",
   },
   {
@@ -32,7 +32,7 @@ export const services: Service[] = [
     short: "Perfekt geformt, ganz ohne Styling-Aufwand.",
     description:
       "Perfekt geformte und voller wirkende Augenbrauen – ganz ohne tägliches Styling. Auf Wunsch inklusive Färben und individueller Anpassung für ein harmonisches Gesamtbild.",
-    image: "/images/brows.jpg",
+    image: "/images/browslifting.png",
     imageAlt: "Augenbrauen nach einem Brow Lifting",
   },
 ];

@@ -11,7 +11,7 @@ export function Pricing() {
             <span className="eyebrow">Preise</span>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
               Transparente Preise —{" "}
               <em className="text-orchid not-italic">Schönheit beginnt mit Vertrauen</em>.
             </h2>

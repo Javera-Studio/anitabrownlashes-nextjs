@@ -29,7 +29,7 @@ export function Navigation() {
       }`}
     >
       <div className="container-studio flex h-20 items-center justify-between md:h-24">
-        <Link href="#top" className="font-serif text-xl tracking-tight text-ink md:text-2xl">
+        <Link href="#top" className="font-serif text-xl tracking-[0.01em] text-ink md:text-2xl">
           Anita<span className="text-orchid"> Brows</span> &amp; Lashes
         </Link>
 

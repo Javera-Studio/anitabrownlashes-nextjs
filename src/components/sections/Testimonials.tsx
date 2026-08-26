@@ -20,7 +20,7 @@ export function Testimonials() {
         <div className="mb-14 flex flex-col gap-10 lg:mb-20 lg:flex-row lg:items-end lg:justify-between">
           <Reveal className="max-w-2xl">
             <span className="eyebrow">Das sagen meine Kundinnen</span>
-            <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
               Vertrauen, das für sich <em className="text-orchid not-italic">spricht</em>.
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-soft">

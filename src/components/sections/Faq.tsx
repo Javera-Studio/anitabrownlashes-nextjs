@@ -14,7 +14,7 @@ export function Faq() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-20">
           <Reveal className="lg:sticky lg:top-28 lg:col-span-4 lg:self-start">
             <span className="eyebrow">Gut zu wissen</span>
-            <h2 className="mt-5 font-serif text-[2.2rem] leading-[1.1] tracking-tight text-ink sm:text-5xl">
+            <h2 className="mt-5 font-serif text-[2.2rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
               Häufig gestellte <em className="text-orchid not-italic">Fragen</em>.
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
