@@ -40,7 +40,7 @@ export function Gallery() {
                 key={img.src}
                 image
                 delay={(i % 3) * 100}
-                className={`${spanClasses[i] ?? "col-span-1"} group relative overflow-hidden rounded-2xl bg-lilac/40`}
+                className={`${spanClasses[i] ?? "col-span-1"} group relative overflow-hidden bg-lilac/40`}
               >
                 <div className="relative h-full min-h-[220px] w-full">
                   <Image
@@ -81,7 +81,7 @@ export function Gallery() {
           </Reveal>
 
           <div className="grid grid-cols-2 gap-4 md:col-span-7 md:grid-cols-2 md:gap-5">
-            <Reveal image className="relative col-span-2 aspect-[16/10] overflow-hidden rounded-2xl md:col-span-2">
+            <Reveal image className="relative col-span-2 aspect-[16/10] overflow-hidden md:col-span-2">
               <Image
                 src={studioImages[0].src}
                 alt={studioImages[0].alt}
@@ -91,7 +91,7 @@ export function Gallery() {
                 className="object-cover"
               />
             </Reveal>
-            <Reveal image delay={100} className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+            <Reveal image delay={100} className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={studioImages[1].src}
                 alt={studioImages[1].alt}
@@ -101,7 +101,7 @@ export function Gallery() {
                 className="object-cover"
               />
             </Reveal>
-            <Reveal image delay={200} className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+            <Reveal image delay={200} className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={studioImages[2].src}
                 alt={studioImages[2].alt}

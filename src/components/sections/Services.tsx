@@ -36,7 +36,7 @@ export function Services() {
                   image
                   className={`md:col-span-7 ${reversed ? "md:order-2 md:ml-auto" : ""}`}
                 >
-                  <div className="group relative aspect-[5/4] w-full max-w-lg overflow-hidden rounded-[1.75rem] bg-lilac/40">
+                  <div className="group relative aspect-[5/4] w-full max-w-lg overflow-hidden bg-lilac/40">
                     <Image
                       src={service.image}
                       alt={service.imageAlt}

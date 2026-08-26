@@ -61,7 +61,7 @@ export function Hero() {
           </div>
 
           <Reveal delay={200} image className="relative mx-auto w-full max-w-md lg:max-w-none">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-rose/40">
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-rose/40">
               <Image
                 src="/images/hero-eye.jpg"
                 alt="Detailaufnahme von Wimpern und Augenbrauen"
@@ -78,7 +78,7 @@ export function Hero() {
         <ul className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-6">
           {trustItems.map((item, i) => (
             <Reveal key={item.title} delay={i * 100}>
-              <li className="h-full rounded-2xl border border-ink/10 bg-white/70 px-5 py-5">
+              <li className="h-full border border-ink/10 bg-white/70 px-5 py-5">
                 <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
                 <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
               </li>

@@ -27,7 +27,7 @@ export function Pricing() {
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-3">
           {pricingGroups.map((group, i) => (
             <Reveal key={group.title} delay={i * 120}>
-              <article className="flex h-full flex-col rounded-2xl bg-white p-7 shadow-[0_18px_50px_-30px_rgba(22,18,26,0.25)] transition-transform duration-500 hover:-translate-y-1.5 lg:p-8">
+              <article className="flex h-full flex-col bg-white p-7 shadow-[0_18px_50px_-30px_rgba(22,18,26,0.25)] transition-transform duration-500 hover:-translate-y-1.5 lg:p-8">
                 <h3 className="font-serif text-xl text-ink">{group.title}</h3>
                 <span className="mt-4 h-px w-10 bg-orchid/50" />
                 <div className="mt-6 flex items-baseline gap-1.5">

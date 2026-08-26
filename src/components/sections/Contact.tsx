@@ -72,7 +72,7 @@ export function Contact() {
                 href={business.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 w-full items-center justify-center gap-2.5 rounded-full bg-orchid text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-orchid-hover"
+                className="inline-flex h-12 w-full items-center justify-center gap-2.5 bg-orchid text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-orchid-hover"
               >
                 WhatsApp schreiben
               </a>
@@ -81,7 +81,7 @@ export function Contact() {
                   href={business.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-white/30 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/10"
+                  className="inline-flex h-12 w-full items-center justify-center gap-2 border border-white/30 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/10"
                 >
                   Instagram
                 </a>
@@ -89,7 +89,7 @@ export function Contact() {
                   href={business.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-white/30 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/10"
+                  className="inline-flex h-12 w-full items-center justify-center gap-2 border border-white/30 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white/10"
                 >
                   Facebook
                 </a>
@@ -98,7 +98,7 @@ export function Contact() {
                 href={bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 inline-flex h-12 w-full items-center justify-center rounded-full bg-white text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-ink transition-colors hover:bg-rose"
+                className="mt-1 inline-flex h-12 w-full items-center justify-center bg-white text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-ink transition-colors hover:bg-rose"
               >
                 Termin online buchen
               </a>
@@ -107,7 +107,7 @@ export function Contact() {
 
           <Reveal
             delay={200}
-            className="min-h-[420px] overflow-hidden rounded-2xl border border-white/15 md:col-span-3"
+            className="min-h-[420px] overflow-hidden border border-white/15 md:col-span-3"
           >
             <iframe
               title="Anita Brows & Lashes – Standort"

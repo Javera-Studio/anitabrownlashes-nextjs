@@ -28,7 +28,7 @@ export function Instagram() {
                 href={business.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex h-12 items-center gap-3 rounded-full border border-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-orchid transition-colors hover:bg-orchid hover:text-white"
+                className="mt-8 inline-flex h-12 items-center gap-3 border border-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-orchid transition-colors hover:bg-orchid hover:text-white"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6">
                   <rect x="3" y="3" width="18" height="18" rx="5" />

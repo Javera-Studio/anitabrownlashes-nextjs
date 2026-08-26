@@ -82,7 +82,7 @@ export function Faq() {
             href={business.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-12 items-center gap-2 rounded-full bg-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-orchid-hover"
+            className="inline-flex h-12 items-center gap-2 bg-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors hover:bg-orchid-hover"
           >
             WhatsApp schreiben
           </a>

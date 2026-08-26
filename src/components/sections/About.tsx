@@ -9,7 +9,7 @@ export function About() {
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <Reveal image className="relative mx-auto max-w-md">
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-white">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-white">
                 <Image
                   src="/images/anita-portrait.jpg"
                   alt="Anita Lakatos – Inhaberin von Anita Brows & Lashes"

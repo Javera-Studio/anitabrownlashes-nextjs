@@ -7,7 +7,7 @@ interface BookingButtonProps {
 }
 
 const base =
-  "group inline-flex h-12 items-center justify-center gap-2.5 rounded-full px-8 text-[0.72rem] font-semibold tracking-[0.2em] uppercase transition-colors duration-300";
+  "group inline-flex h-12 items-center justify-center gap-2.5 px-8 text-[0.72rem] font-semibold tracking-[0.2em] uppercase transition-colors duration-300";
 
 const variants: Record<NonNullable<BookingButtonProps["variant"]>, string> = {
   solid: "bg-orchid text-white hover:bg-orchid-hover",

@@ -30,7 +30,7 @@ export function Testimonials() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="flex gap-8 rounded-2xl border border-orchid/30 bg-rose/20 px-7 py-6">
+            <div className="flex gap-8 border border-orchid/30 bg-rose/20 px-7 py-6">
               <div>
                 <div className="flex items-baseline gap-1.5">
                   <span className="font-serif text-3xl text-ink">{reviewStats.rating}</span>
@@ -53,7 +53,7 @@ export function Testimonials() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((review, i) => (
             <Reveal key={review.name} delay={(i % 4) * 100}>
-              <figure className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-white p-6 transition-shadow duration-500 hover:shadow-[0_20px_50px_-30px_rgba(22,18,26,0.25)]">
+              <figure className="flex h-full flex-col gap-4 border border-border bg-white p-6 transition-shadow duration-500 hover:shadow-[0_20px_50px_-30px_rgba(22,18,26,0.25)]">
                 <Stars />
                 <blockquote className="flex-1 text-sm leading-relaxed text-ink-soft">
                   {review.quote}

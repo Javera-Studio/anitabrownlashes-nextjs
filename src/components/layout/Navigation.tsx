@@ -50,7 +50,7 @@ export function Navigation() {
             href={bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-orchid px-6 text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-white transition-colors hover:bg-orchid-hover"
+            className="inline-flex h-11 items-center justify-center bg-orchid px-6 text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-white transition-colors hover:bg-orchid-hover"
           >
             Termin buchen
           </a>
@@ -92,7 +92,7 @@ export function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-orchid px-6 text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-white"
+              className="mt-4 inline-flex h-12 items-center justify-center bg-orchid px-6 text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-white"
             >
               Termin buchen
             </a>
