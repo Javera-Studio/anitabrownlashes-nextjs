@@ -77,12 +77,14 @@ body {
   }
 }
 
-.eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-orchid);
-  font-weight: 600;
+@layer components {
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--color-orchid);
+    font-weight: 600;
+  }
 }
 
 /* Scroll reveal */

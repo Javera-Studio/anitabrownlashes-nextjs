@@ -2,7 +2,7 @@ import { bookingUrl } from "@/lib/data/business";
 
 interface BookingButtonProps {
   label?: string;
-  variant?: "solid" | "outline" | "ghost";
+  variant?: "solid" | "outline" | "ghost" | "light";
   className?: string;
 }
 
@@ -13,6 +13,7 @@ const variants: Record<NonNullable<BookingButtonProps["variant"]>, string> = {
   solid: "bg-orchid text-white hover:bg-orchid-hover",
   outline: "border border-orchid text-orchid hover:bg-orchid hover:text-white",
   ghost: "bg-white text-ink hover:bg-lilac",
+  light: "border border-white text-white hover:bg-white hover:text-ink",
 };
 
 export function BookingButton({
