@@ -25,36 +25,24 @@ export function Gallery() {
         </div>
 
         {/* Asymmetric result grid */}
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-6 md:gap-5">
-          {resultImages.map((img, i) => {
-            const spanClasses = [
-              "col-span-2 row-span-2 md:col-span-3",
-              "col-span-1 md:col-span-3",
-              "col-span-1 md:col-span-2",
-              "col-span-2 md:col-span-2 md:row-span-2",
-              "col-span-1 md:col-span-2",
-              "col-span-2 md:col-span-6",
-            ];
-            return (
-              <Reveal
-                key={img.src}
-                image
-                delay={(i % 3) * 100}
-                className={`${spanClasses[i] ?? "col-span-1"} group relative overflow-hidden bg-lilac/40`}
-              >
-                <div className="relative h-full min-h-[220px] w-full">
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    loading="lazy"
-                    sizes="(min-width: 768px) 33vw, 50vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-              </Reveal>
-            );
-          })}
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:gap-5">
+          {resultImages.map((img, i) => (
+            <Reveal
+              key={img.src}
+              image
+              delay={(i % 3) * 100}
+              className="relative aspect-[3/4] overflow-hidden bg-lilac/40"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                loading="lazy"
+                sizes="(min-width: 768px) 33vw, 50vw"
+                className="object-contain"
+              />
+            </Reveal>
+          ))}
         </div>
 
         {/* Studio ambience strip */}

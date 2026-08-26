@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Bodoni_Moda, Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const bodoni = Bodoni_Moda({
+  variable: "--font-bodoni",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   style: ["normal", "italic"],
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="de" className={`${cormorant.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="de" className={`${bodoni.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-paper text-ink">
         <JsonLd />
         <Navigation />
