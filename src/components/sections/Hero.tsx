@@ -36,7 +36,7 @@ export function Hero() {
 
         <div className="relative z-10 flex flex-1 justify-center px-6">
           <div className="w-full max-w-[820px] text-center text-white">
-            <Reveal>
+            <Reveal duration={1400}>
               <span className="inline-flex items-center gap-3 text-xs">
                 <span className="h-px w-8 bg-white/70" />
                 <span className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/90">
@@ -46,21 +46,21 @@ export function Hero() {
               </span>
             </Reveal>
 
-            <Reveal delay={120}>
+            <Reveal delay={240} duration={1400}>
               <h1 className="mt-5 font-serif text-[2.9rem] leading-[1.1] tracking-[0.01em] text-balance sm:text-[3.4rem] md:text-[4rem] lg:whitespace-nowrap lg:text-[4.6rem] xl:text-[5rem]"
                   style={{ textShadow: "0 2px 18px rgba(0,0,0,0.22)" }}>
                 Ein Blick, der <em className="text-rose not-italic">bleibt</em>.
               </h1>
             </Reveal>
 
-            <Reveal delay={240}>
+            <Reveal delay={480} duration={1400}>
               <p className="mx-auto mt-5 max-w-[620px] text-[1.15rem] leading-[1.5] text-white/90 md:text-[1.35rem]">
                 Wimpernverlängerung, Lash &amp; Brow Lifting in Wien – individuell
                 abgestimmt und mit über 18 Jahren Erfahrung.
               </p>
             </Reveal>
 
-            <Reveal delay={360}>
+            <Reveal delay={720} duration={1400}>
               <div className="mt-8 flex justify-center">
                 <a
                   href={bookingUrl}
@@ -82,7 +82,7 @@ export function Hero() {
               </div>
             </Reveal>
 
-            <Reveal delay={460}>
+            <Reveal delay={920} duration={1400}>
               <div className="mt-6 flex items-center justify-center gap-2.5">
                 <div className="flex gap-0.5 text-rose">
                   {Array.from({ length: 5 }).map((_, i) => (
@@ -102,12 +102,12 @@ export function Hero() {
         <div className="h-8 shrink-0 sm:h-10 lg:h-14" aria-hidden />
       </div>
 
-      <div className="bg-white">
+      <div className="bg-white py-10 md:py-14">
         <div className="container-studio">
-          <ul className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {trustItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
-                <li className="h-full border-t border-border px-1 py-8 lg:border-t-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0">
+                <li className="h-full border border-ink px-6 py-6">
                   <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
                   <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
                 </li>

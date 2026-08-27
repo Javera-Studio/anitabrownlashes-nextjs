@@ -7,9 +7,16 @@ interface RevealProps {
   className?: string;
   delay?: number;
   image?: boolean;
+  duration?: number;
 }
 
-export function Reveal({ children, className = "", delay = 0, image = false }: RevealProps) {
+export function Reveal({
+  children,
+  className = "",
+  delay = 0,
+  image = false,
+  duration,
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -39,7 +46,12 @@ export function Reveal({ children, className = "", delay = 0, image = false }: R
       ref={ref}
       data-reveal
       className={classes}
-      style={{ "--reveal-delay": `${delay}ms` } as CSSProperties}
+      style={
+        {
+          "--reveal-delay": `${delay}ms`,
+          ...(duration ? { "--reveal-duration": `${duration}ms` } : {}),
+        } as CSSProperties
+      }
     >
       {children}
     </div>
