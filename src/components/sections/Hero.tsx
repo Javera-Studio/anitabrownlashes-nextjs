@@ -2,6 +2,13 @@ import Image from "next/image";
 import { bookingUrl } from "@/lib/data/business";
 import { Reveal } from "@/components/ui/Reveal";
 
+const trustItems = [
+  { title: "18+ Jahre Erfahrung", text: "Langjährige Expertise in Lash- & Brow-Styling." },
+  { title: "Premium-Produkte", text: "Ausschließlich hochwertige, ausgewählte Produkte." },
+  { title: "Persönliche Beratung", text: "Individuell abgestimmt auf Ihre Wünsche." },
+  { title: "Studio im 1. Bezirk", text: "Zentrale Lage im Herzen Wiens." },
+];
+
 export function Hero() {
   return (
     <section id="top" className="relative">
@@ -93,6 +100,21 @@ export function Hero() {
         </div>
 
         <div className="h-8 shrink-0 sm:h-10 lg:h-14" aria-hidden />
+      </div>
+
+      <div className="bg-white">
+        <div className="container-studio">
+          <ul className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-4">
+            {trustItems.map((item, i) => (
+              <Reveal key={item.title} delay={i * 100}>
+                <li className="h-full border-t border-border px-1 py-8 lg:border-t-0 lg:border-l lg:px-8 lg:first:border-l-0 lg:first:pl-0">
+                  <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
+                  <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
