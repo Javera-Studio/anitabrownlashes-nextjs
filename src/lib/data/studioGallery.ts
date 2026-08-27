@@ -65,4 +65,10 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     width: 1920,
     height: 1080,
   },
+  {
+    src: "/images/galerie16.jpg",
+    alt: "Anita in ihrem Studio mit stilvollem Interieur und Arbeitsplatz",
+    width: 1080,
+    height: 1920,
+  },
 ];
