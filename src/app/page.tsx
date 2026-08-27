@@ -17,9 +17,9 @@ export default function Home() {
       <About />
       <Statement />
       <Gallery />
+      <Instagram />
       <Pricing />
       <Testimonials />
-      <Instagram />
       <Faq />
       <Contact />
     </>
