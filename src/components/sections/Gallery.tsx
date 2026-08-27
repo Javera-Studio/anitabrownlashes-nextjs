@@ -46,8 +46,8 @@ export function Gallery() {
         </div>
 
         {/* Studio ambience strip */}
-        <div className="mt-20 grid grid-cols-1 gap-10 md:mt-28 md:grid-cols-12 md:items-center md:gap-14">
-          <Reveal className="md:col-span-5">
+        <div className="mt-20 md:mt-28">
+          <Reveal className="max-w-xl">
             <span className="eyebrow">Ein Ort zum Ankommen</span>
             <h3 className="mt-5 max-w-[18ch] font-serif text-[2rem] leading-[1.15] tracking-[0.01em] text-ink md:text-4xl">
               Mehr als eine Behandlung —{" "}
@@ -68,24 +68,24 @@ export function Gallery() {
             </a>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-4 md:col-span-7 md:gap-5">
-            <Reveal image className="relative aspect-[4/5] overflow-hidden">
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+            <Reveal image className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={studioImages[0].src}
                 alt={studioImages[0].alt}
                 fill
                 loading="lazy"
-                sizes="(min-width: 768px) 27vw, 50vw"
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </Reveal>
-            <Reveal image delay={100} className="relative aspect-[4/5] overflow-hidden">
+            <Reveal image delay={100} className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={studioImages[1].src}
                 alt={studioImages[1].alt}
                 fill
                 loading="lazy"
-                sizes="(min-width: 768px) 27vw, 50vw"
+                sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
               />
             </Reveal>
