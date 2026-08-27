@@ -22,15 +22,22 @@ export function Navigation() {
     };
   }, [open]);
 
+  const solid = scrolled || open;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
+        solid ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
       }`}
     >
       <div className="container-studio flex h-20 items-center justify-between md:h-24">
-        <Link href="#top" className="font-serif text-xl tracking-[0.01em] text-ink md:text-2xl">
-          Anita<span className="text-orchid"> Brows</span> &amp; Lashes
+        <Link
+          href="#top"
+          className={`font-serif text-xl tracking-[0.01em] transition-colors duration-300 md:text-2xl ${
+            solid ? "text-ink" : "text-white"
+          }`}
+        >
+          Anita<span className={solid ? "text-orchid" : "text-rose"}> Brows</span> &amp; Lashes
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -38,7 +45,11 @@ export function Navigation() {
             <a
               key={link.href}
               href={link.href}
-              className="relative text-sm tracking-wide text-ink-soft transition-colors hover:text-orchid after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-orchid after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative text-sm tracking-wide transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:transition-all after:duration-300 hover:after:w-full ${
+                solid
+                  ? "text-ink-soft after:bg-orchid hover:text-orchid"
+                  : "text-white/90 after:bg-white hover:text-white"
+              }`}
             >
               {link.label}
             </a>
@@ -61,14 +72,16 @@ export function Navigation() {
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="relative flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 lg:hidden"
+          className={`relative flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-300 lg:hidden ${
+            solid ? "border-ink/15" : "border-white/40"
+          }`}
         >
           <span className="relative block h-3.5 w-4">
             <span
-              className={`absolute left-0 top-0 h-px w-full bg-ink transition-transform duration-300 ${open ? "translate-y-[6.5px] rotate-45" : ""}`}
+              className={`absolute left-0 top-0 h-px w-full transition-transform duration-300 ${solid ? "bg-ink" : "bg-white"} ${open ? "translate-y-[6.5px] rotate-45" : ""}`}
             />
             <span
-              className={`absolute left-0 bottom-0 h-px w-full bg-ink transition-transform duration-300 ${open ? "-translate-y-[6.5px] -rotate-45" : ""}`}
+              className={`absolute left-0 bottom-0 h-px w-full transition-transform duration-300 ${solid ? "bg-ink" : "bg-white"} ${open ? "-translate-y-[6.5px] -rotate-45" : ""}`}
             />
           </span>
         </button>
