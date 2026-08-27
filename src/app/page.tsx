@@ -4,6 +4,7 @@ import { PortraitQuote } from "@/components/sections/PortraitQuote";
 import { About } from "@/components/sections/About";
 import { Statement } from "@/components/sections/Statement";
 import { Gallery } from "@/components/sections/Gallery";
+import { StudioGallery } from "@/components/sections/StudioGallery";
 import { Pricing } from "@/components/sections/Pricing";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Instagram } from "@/components/sections/Instagram";
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Statement />
       <Gallery />
+      <StudioGallery />
       <Instagram />
       <Pricing />
       <Testimonials />
