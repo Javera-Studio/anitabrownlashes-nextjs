@@ -7,7 +7,7 @@ export function PortraitQuote() {
       <div className="flex flex-col md:h-[640px] md:flex-row lg:h-[680px]">
         <Reveal className="relative aspect-[3/2] w-full bg-rose/50 md:h-full md:w-[58%] md:aspect-auto lg:w-[60%]">
           <Image
-            src="/images/hero2.png"
+            src="/images/hero2.jpg"
             alt="Nahaufnahme eines natürlich geschminkten Gesichts mit gepflegten Augenbrauen und Wimpern"
             fill
             sizes="(min-width: 768px) 60vw, 100vw"

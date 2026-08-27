@@ -11,7 +11,7 @@ export function About() {
             <Reveal image className="relative mx-auto max-w-md">
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-white">
                 <Image
-                  src="/images/anita1.png"
+                  src="/images/anita1.jpg"
                   alt="Anita Lakatos – Inhaberin von Anita Brows & Lashes in ihrem Studio"
                   fill
                   sizes="(min-width: 1024px) 35vw, 90vw"

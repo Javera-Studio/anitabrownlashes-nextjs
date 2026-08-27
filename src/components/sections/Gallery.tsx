@@ -68,14 +68,14 @@ export function Gallery() {
             </a>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-4 md:col-span-7 md:grid-cols-2 md:gap-5">
-            <Reveal image className="relative col-span-2 aspect-[16/10] overflow-hidden md:col-span-2">
+          <div className="grid grid-cols-2 gap-4 md:col-span-7 md:gap-5">
+            <Reveal image className="relative aspect-[4/5] overflow-hidden">
               <Image
                 src={studioImages[0].src}
                 alt={studioImages[0].alt}
                 fill
                 loading="lazy"
-                sizes="(min-width: 768px) 55vw, 100vw"
+                sizes="(min-width: 768px) 27vw, 50vw"
                 className="object-cover"
               />
             </Reveal>
@@ -83,16 +83,6 @@ export function Gallery() {
               <Image
                 src={studioImages[1].src}
                 alt={studioImages[1].alt}
-                fill
-                loading="lazy"
-                sizes="(min-width: 768px) 27vw, 50vw"
-                className="object-cover"
-              />
-            </Reveal>
-            <Reveal image delay={200} className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src={studioImages[2].src}
-                alt={studioImages[2].alt}
                 fill
                 loading="lazy"
                 sizes="(min-width: 768px) 27vw, 50vw"

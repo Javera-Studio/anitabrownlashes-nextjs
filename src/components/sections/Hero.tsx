@@ -14,7 +14,7 @@ export function Hero() {
     <section id="top" className="relative">
       <div className="relative flex h-[100svh] min-h-[640px] w-full flex-col overflow-hidden bg-ink">
         <Image
-          src="/images/heromain.png"
+          src="/images/heromain.jpg"
           alt="Drei lächelnde Frauen mit gepflegten Wimpern und Augenbrauen"
           fill
           priority
