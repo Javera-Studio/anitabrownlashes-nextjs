@@ -54,10 +54,10 @@ export function Pricing() {
         </div>
 
         <Reveal delay={200} className="mt-14 flex flex-col items-center gap-6 text-center">
-          <p className="max-w-xl text-sm italic text-ink-soft">
-            Sie sind unsicher, welche Behandlung am besten zu Ihnen passt? Ich berate
-            Sie gerne persönlich.
-          </p>
+          <div className="max-w-xl space-y-2 text-sm italic text-ink-soft">
+            <p>Sie sind unsicher, welche Behandlung am besten zu Ihnen passt?</p>
+            <p>Ich berate Sie gerne persönlich.</p>
+          </div>
           <BookingButton label="Alle Preise & Termine ansehen" />
         </Reveal>
       </div>
