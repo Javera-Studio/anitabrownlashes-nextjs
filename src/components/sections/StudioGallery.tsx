@@ -12,7 +12,7 @@ export function StudioGallery() {
   const [hero, ...rest] = studioGalleryImages;
 
   return (
-    <section className="bg-white pb-24 pt-6 md:pb-32 md:pt-8">
+    <section className="bg-white pb-24 pt-[17px] md:pb-32 md:pt-[22px]">
       <div className="container-studio">
         <div className="mb-10 flex flex-col items-center gap-4 text-center md:mb-14">
           <Reveal>

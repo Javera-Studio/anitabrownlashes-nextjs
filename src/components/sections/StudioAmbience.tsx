@@ -5,7 +5,7 @@ import { business } from "@/lib/data/business";
 
 export function StudioAmbience() {
   return (
-    <section className="bg-white pb-10 pt-6 md:pb-14 md:pt-8">
+    <section className="bg-white pb-7 pt-6 md:pb-10 md:pt-8">
       <div className="container-studio">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-14">
           <Reveal>
