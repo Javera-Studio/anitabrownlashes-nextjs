@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { BookingButton } from "@/components/ui/BookingButton";
+import { PriceHero } from "@/components/sections/PriceHero";
 import { PriceAccordion } from "@/components/pricing/PriceAccordion";
 import { PriceGroup } from "@/components/pricing/PriceGroup";
 import { PriceRows } from "@/components/pricing/PriceRows";
@@ -8,7 +9,6 @@ import {
   lashLiftingGroups,
   browGroups,
   comboPackageRows,
-  priceJumpLinks,
 } from "@/lib/data/priceList";
 
 export const metadata: Metadata = {
@@ -19,35 +19,8 @@ export const metadata: Metadata = {
 
 export default function PreisePage() {
   return (
-    <div className="pt-20 md:pt-[92px]">
-      {/* Seitenkopf */}
-      <section className="bg-white py-16 md:py-20">
-        <div className="container-studio">
-          <span className="eyebrow">Preisliste</span>
-          <h1 className="mt-5 max-w-2xl font-serif text-[2.4rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
-            Preise &amp; Behandlungen
-          </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-            Finden Sie hier alle Preise für Wimpernverlängerung, Lash Lifting, Brow
-            Lifting und Augenbrauenbehandlungen im Überblick.
-          </p>
-
-          <nav
-            aria-label="Sprungnavigation Preisliste"
-            className="mt-8 flex gap-6 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible"
-          >
-            {priceJumpLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="shrink-0 whitespace-nowrap border-b border-orchid/50 pb-1 text-sm font-medium tracking-wide text-ink transition-colors hover:border-orchid hover:text-orchid"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </section>
+    <div>
+      <PriceHero />
 
       {/* 1. Wimpernverlängerung */}
       <section id="wimpernverlaengerung" className="bg-white py-16 md:py-20">

@@ -10,6 +10,7 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const hasPhotoHero = isHome || pathname === "/preise";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -25,7 +26,7 @@ export function Navigation() {
     };
   }, [open]);
 
-  const solid = !isHome || scrolled || open;
+  const solid = !hasPhotoHero || scrolled || open;
 
   function resolveHref(href: string) {
     if (href.startsWith("#") && !isHome) return `/${href}`;
