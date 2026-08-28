@@ -4,7 +4,7 @@ import { business } from "@/lib/data/business";
 
 export function Instagram() {
   return (
-    <section className="overflow-hidden bg-mauve/30 py-24 md:py-32">
+    <section className="overflow-hidden bg-mauve/30 py-10 md:py-14">
       <div className="container-studio">
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="text-center lg:col-span-7 lg:text-left">
@@ -41,7 +41,9 @@ export function Instagram() {
           </div>
 
           <div className="lg:col-span-5">
-            <InstagramPhone />
+            <div className="lg:-translate-x-1/2">
+              <InstagramPhone />
+            </div>
           </div>
         </div>
       </div>

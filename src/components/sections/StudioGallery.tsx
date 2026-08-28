@@ -49,30 +49,31 @@ export function StudioGallery() {
           </button>
         </Reveal>
 
-        <div className="mt-4 columns-2 gap-4 sm:columns-3 md:mt-5 md:gap-5">
+        <div className="mt-4 grid auto-rows-[130px] grid-cols-2 [grid-auto-flow:dense] gap-4 sm:grid-cols-3 sm:auto-rows-[160px] md:mt-5 md:gap-5">
           {rest.map((img, i) => {
             const realIndex = i + 1;
+            const tall = img.height > img.width;
             return (
               <Reveal
                 key={img.src}
                 image
                 delay={(i % 3) * 90}
-                className="mb-4 break-inside-avoid md:mb-5"
+                className={`relative overflow-hidden ${tall ? "row-span-2" : "row-span-1"}`}
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(realIndex)}
                   aria-label={img.alt}
-                  className="group relative block w-full overflow-hidden"
+                  className="group relative block h-full w-full overflow-hidden"
                 >
                   <Image
                     src={img.src}
                     alt={img.alt}
-                    width={img.width}
-                    height={img.height}
+                    fill
                     loading="lazy"
                     sizes="(min-width: 1024px) 32vw, (min-width: 640px) 48vw, 48vw"
-                    className="h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                    style={{ objectPosition: img.focus }}
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   />
                 </button>
               </Reveal>

@@ -3,6 +3,8 @@ export interface StudioGalleryImage {
   alt: string;
   width: number;
   height: number;
+  /** CSS object-position, tuned per photo so faces/hands stay visible when cropped. */
+  focus?: string;
 }
 
 /**
@@ -22,12 +24,14 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     alt: "Anita mit Pinzette vor der Studiowand mit dem Schriftzug „Beauty begins the moment you decide to be yourself“",
     width: 1080,
     height: 1920,
+    focus: "center 22%",
   },
   {
     src: "/images/galerie2.jpg",
     alt: "Hand mit Wimpern-Pads und Produkten während der Behandlungsvorbereitung",
     width: 1080,
     height: 1920,
+    focus: "center 30%",
   },
   {
     src: "/images/galerie10.jpg",
@@ -40,12 +44,14 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     alt: "Anita bei der Arbeit an den Wimpern einer Kundin",
     width: 1080,
     height: 1920,
+    focus: "center 20%",
   },
   {
     src: "/images/galerie1.jpg",
     alt: "Reinigung der Arbeitsinstrumente im Ultraschallgerät im Studio",
     width: 1080,
     height: 1920,
+    focus: "center 55%",
   },
   {
     src: "/images/galerie14.jpg",
@@ -70,5 +76,6 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     alt: "Anita in ihrem Studio mit stilvollem Interieur und Arbeitsplatz",
     width: 1080,
     height: 1920,
+    focus: "20% 30%",
   },
 ];
