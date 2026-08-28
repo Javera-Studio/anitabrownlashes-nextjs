@@ -139,10 +139,78 @@ body {
 #leistungen,
 #ueber-anita,
 #ergebnisse,
-#preise,
 #faq,
-#kontakt {
+#kontakt,
+#wimpernverlaengerung,
+#lash-lifting,
+#brow-lifting,
+#kombi-paket {
   scroll-margin-top: 96px;
+}
+
+/* Price list rows: treatment/duration/price reflow between mobile and desktop */
+.price-row-head {
+  display: none;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "treatment treatment"
+    "duration price";
+  column-gap: 1rem;
+  row-gap: 0.375rem;
+  align-items: baseline;
+}
+
+.price-row .price-treatment {
+  grid-area: treatment;
+}
+
+.price-row .price-duration {
+  grid-area: duration;
+}
+
+.price-row .price-price {
+  grid-area: price;
+  text-align: right;
+}
+
+@media (min-width: 640px) {
+  .price-row-head {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    column-gap: 1.5rem;
+  }
+
+  .price-row-head .price-duration,
+  .price-row-head .price-price {
+    text-align: right;
+  }
+
+  .price-row-head .price-duration {
+    min-width: 8rem;
+  }
+
+  .price-row-head .price-price {
+    min-width: 5rem;
+  }
+
+  .price-row {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: "treatment duration price";
+    column-gap: 1.5rem;
+  }
+
+  .price-row .price-duration {
+    min-width: 8rem;
+    text-align: right;
+  }
+
+  .price-row .price-price {
+    min-width: 5rem;
+  }
 }
 
 .hairline {

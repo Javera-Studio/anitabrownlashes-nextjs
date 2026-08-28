@@ -52,7 +52,7 @@ export const navLinks = [
   { label: "Leistungen", href: "#leistungen" },
   { label: "Über Anita", href: "#ueber-anita" },
   { label: "Ergebnisse", href: "#ergebnisse" },
-  { label: "Preise", href: "#preise" },
+  { label: "Preise", href: "/preise" },
   { label: "FAQ", href: "#faq" },
   { label: "Kontakt", href: "#kontakt" },
 ] as const;

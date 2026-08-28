@@ -35,13 +35,13 @@ export function Faq() {
                         onClick={() => setOpenIndex(isOpen ? null : i)}
                         aria-expanded={isOpen}
                         aria-controls={`faq-panel-${i}`}
-                        className="flex w-full min-h-14 items-center justify-between gap-6 py-6 text-left"
+                        className="flex w-full min-h-14 items-center justify-between gap-6 py-5 text-left"
                       >
-                        <span className="flex items-center gap-5">
-                          <span className="w-6 shrink-0 font-serif text-sm tabular-nums text-orchid">
+                        <span className="flex items-center gap-4">
+                          <span className="w-5 shrink-0 font-serif text-xs tabular-nums text-orchid">
                             {String(i + 1).padStart(2, "0")}
                           </span>
-                          <span className="font-serif text-lg leading-snug text-ink md:text-xl">
+                          <span className="font-serif text-base leading-snug text-ink md:text-lg">
                             {item.question}
                           </span>
                         </span>
@@ -62,7 +62,7 @@ export function Faq() {
                       style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                     >
                       <div className="min-h-0">
-                        <p className="max-w-2xl pb-6 pl-11 text-[0.95rem] leading-relaxed text-ink-soft md:pl-12">
+                        <p className="max-w-2xl pb-5 pl-9 text-sm leading-relaxed text-ink-soft md:pl-10">
                           {item.answer}
                         </p>
                       </div>

@@ -2,11 +2,14 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navLinks, bookingUrl } from "@/lib/data/business";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -22,7 +25,12 @@ export function Navigation() {
     };
   }, [open]);
 
-  const solid = scrolled || open;
+  const solid = !isHome || scrolled || open;
+
+  function resolveHref(href: string) {
+    if (href.startsWith("#") && !isHome) return `/${href}`;
+    return href;
+  }
 
   return (
     <header
@@ -32,7 +40,7 @@ export function Navigation() {
     >
       <div className="container-studio flex h-20 items-center justify-between md:h-[92px]">
         <Link
-          href="#top"
+          href={isHome ? "#top" : "/"}
           className={`font-serif text-xl tracking-[0.01em] transition-colors duration-300 md:text-2xl ${
             solid ? "text-ink" : "text-white"
           }`}
@@ -44,7 +52,7 @@ export function Navigation() {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               className={`relative text-sm tracking-wide transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:transition-all after:duration-300 hover:after:w-full ${
                 solid
                   ? "text-ink-soft after:bg-orchid hover:text-orchid"
@@ -93,7 +101,7 @@ export function Navigation() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={resolveHref(link.href)}
                 onClick={() => setOpen(false)}
                 className="min-h-11 border-b border-border/70 py-4 text-base text-ink last:border-b-0"
               >

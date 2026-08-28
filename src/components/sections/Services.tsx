@@ -61,7 +61,7 @@ export function Services() {
                     {service.description}
                   </p>
                   <a
-                    href="#preise"
+                    href={`/preise#${service.slug}`}
                     className="group/link mt-6 inline-flex items-center gap-3 py-1.5 text-sm font-medium tracking-wide text-ink"
                   >
                     <span className="border-b border-orchid/60 pb-0.5 transition-colors group-hover/link:border-orchid group-hover/link:text-ink">

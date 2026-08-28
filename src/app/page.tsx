@@ -7,7 +7,6 @@ import { Gallery } from "@/components/sections/Gallery";
 import { PortraitQuoteReverse } from "@/components/sections/PortraitQuoteReverse";
 import { StudioAmbience } from "@/components/sections/StudioAmbience";
 import { StudioGallery } from "@/components/sections/StudioGallery";
-import { Pricing } from "@/components/sections/Pricing";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Instagram } from "@/components/sections/Instagram";
 import { Faq } from "@/components/sections/Faq";
@@ -26,7 +25,6 @@ export default function Home() {
       <StudioAmbience />
       <StudioGallery />
       <Instagram />
-      <Pricing />
       <Testimonials />
       <Faq />
       <Contact />
