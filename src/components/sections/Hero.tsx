@@ -35,7 +35,7 @@ export function Hero() {
         <div className="basis-[54%] shrink-0 sm:basis-[57%] lg:basis-[60%]" aria-hidden />
 
         <div className="relative z-10 flex flex-1 justify-center px-6">
-          <div className="w-full max-w-[820px] text-center text-white">
+          <div className="-mt-[1cm] w-full max-w-[820px] text-center text-white">
             <Reveal duration={1400}>
               <span className="inline-flex items-center gap-3 text-xs">
                 <span className="h-px w-8 bg-white/70" />
@@ -47,7 +47,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={240} duration={1400}>
-              <h1 className="mt-5 font-serif text-[2.9rem] leading-[1.1] tracking-[0.01em] text-balance sm:text-[3.4rem] md:text-[4rem] lg:whitespace-nowrap lg:text-[4.6rem] xl:text-[5rem]"
+              <h1 className="mt-5 font-serif text-[2.47rem] leading-[1.1] tracking-[0.01em] text-balance sm:text-[2.9rem] md:text-[3.4rem] lg:whitespace-nowrap lg:text-[3.9rem] xl:text-[4.25rem]"
                   style={{ textShadow: "0 2px 18px rgba(0,0,0,0.22)" }}>
                 Ein Blick, der <em className="text-rose not-italic">bleibt</em>.
               </h1>
@@ -102,12 +102,12 @@ export function Hero() {
         <div className="h-8 shrink-0 sm:h-10 lg:h-14" aria-hidden />
       </div>
 
-      <div className="bg-white pb-[52px] pt-0 md:pb-20 lg:pb-24">
+      <div className="bg-white pb-[26px] pt-0 md:pb-10 lg:pb-12">
         <div className="container-studio">
           <ul className="relative z-20 -mt-7 grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-12 lg:-mt-16 lg:grid-cols-4 lg:gap-5">
             {trustItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
-                <li className="flex h-full min-h-[168px] flex-col justify-center border border-ink/15 bg-white px-8 py-8 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)]">
+                <li className="flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)]">
                   <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
                   <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
                 </li>
