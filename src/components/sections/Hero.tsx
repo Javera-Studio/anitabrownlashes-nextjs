@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { bookingUrl } from "@/lib/data/business";
 import { Reveal } from "@/components/ui/Reveal";
 
 const trustItems = [
@@ -58,28 +57,6 @@ export function Hero() {
                 Wimpernverlängerung, Lash &amp; Brow Lifting in Wien – individuell
                 abgestimmt und mit über 18 Jahren Erfahrung.
               </p>
-            </Reveal>
-
-            <Reveal delay={720} duration={1400}>
-              <div className="mt-8 flex justify-center">
-                <a
-                  href={bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex h-[54px] items-center justify-center gap-2.5 bg-orchid px-8 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white transition-colors duration-300 hover:bg-orchid-hover"
-                >
-                  Termin online buchen
-                  <svg
-                    viewBox="0 0 16 16"
-                    className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                  >
-                    <path d="M2 8h11M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </a>
-              </div>
             </Reveal>
 
             <Reveal delay={920} duration={1400}>
