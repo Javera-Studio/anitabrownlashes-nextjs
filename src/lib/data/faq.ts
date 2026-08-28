@@ -12,9 +12,51 @@ export const faqItems: FaqItem[] = [
     category: "wimpern",
   },
   {
+    question: "Wie oft muss man die Wimpernverlängerung auffüllen lassen?",
+    answer:
+      "In der Regel empfiehlt sich ein Auffülltermin alle 2 bis 4 Wochen, abhängig vom natürlichen Wimpernwachstum.",
+    category: "wimpern",
+  },
+  {
+    question: "Ist eine Wimpernverlängerung schädlich für die natürlichen Wimpern?",
+    answer:
+      "Bei fachgerechter Anwendung und der richtigen Technik werden die natürlichen Wimpern nicht geschädigt. Wichtig sind eine professionelle Applikation und die passende Länge und Stärke der Extensions.",
+    category: "wimpern",
+  },
+  {
     question: "Wie lange hält ein Lash Lifting?",
     answer:
       "Der Effekt hält je nach natürlichem Wimpernwachstum etwa 6 bis 8 Wochen an. Durch das Lifting wirken die Naturwimpern länger, geschwungener und voller.",
+    category: "lifting",
+  },
+  {
+    question: "Was ist ein Lash Lifting?",
+    answer:
+      "Ein Lash Lifting ist eine Behandlung, bei der die natürlichen Wimpern dauerhaft nach oben geformt werden. Dadurch wirken die Wimpern länger, geschwungener und offener – ganz ohne Extensions.",
+    category: "lifting",
+  },
+  {
+    question: "Schädigt ein Lash Lifting die natürlichen Wimpern?",
+    answer:
+      "Bei einer professionellen Durchführung und der richtigen Einwirkzeit werden die natürlichen Wimpern nicht geschädigt.",
+    category: "lifting",
+  },
+  {
+    question: "Werden die Wimpern beim Lash Lifting auch gefärbt?",
+    answer:
+      "Ja, auf Wunsch können die Wimpern im Rahmen der Behandlung zusätzlich gefärbt werden. Dadurch wirken sie dunkler und definierter.",
+    category: "lifting",
+  },
+  {
+    question: "Was ist ein Korean Lash Lifting?",
+    answer:
+      "Das Korean Lash Lifting ist eine moderne Lifting-Methode, bei der besonders auf eine schonende Behandlung und eine intensive Pflege der natürlichen Wimpern geachtet wird.",
+    category: "lifting",
+  },
+  {
+    question: "Warum ist ein Korean Lash Lifting besser?",
+    answer:
+      "Das Korean Lash Lifting kombiniert einen schönen, natürlichen Schwung mit einem besonderen Fokus auf Pflege und Feuchtigkeit. Die Wimpern wirken gepflegt, glänzend und gesund.",
     category: "lifting",
   },
   {
