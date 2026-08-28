@@ -49,9 +49,9 @@ export const lashExtensionTechniques: PriceGroupData[] = [
     ],
   },
   {
-    // Keine Neuanlage übermittelt – bewusst keine Zeile/Preis dafür ergänzt.
     title: "5D Technik",
     rows: [
+      { treatment: "Neuanlage", duration: "2 Std.", price: "150 €" },
       { treatment: "Auffüllen nach 2 Wochen", duration: "1 Std. 30 Min.", price: "80 €" },
       { treatment: "Auffüllen nach 3 Wochen", duration: "1 Std. 45 Min.", price: "90 €" },
       { treatment: "Auffüllen nach 4 Wochen", duration: "1 Std. 45 Min.", price: "100 €" },
