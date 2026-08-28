@@ -38,6 +38,7 @@ export function Gallery() {
                 fill
                 loading="lazy"
                 sizes="(min-width: 768px) 33vw, 50vw"
+                style={i === 3 || i === 5 ? { objectPosition: "center 65%" } : undefined}
                 className="object-contain"
               />
             </Reveal>
