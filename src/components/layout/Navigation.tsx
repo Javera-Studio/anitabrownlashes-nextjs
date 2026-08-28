@@ -30,7 +30,7 @@ export function Navigation() {
         solid ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
       }`}
     >
-      <div className="container-studio flex h-20 items-center justify-between md:h-24">
+      <div className="container-studio flex h-20 items-center justify-between md:h-[92px]">
         <Link
           href="#top"
           className={`font-serif text-xl tracking-[0.01em] transition-colors duration-300 md:text-2xl ${

@@ -12,7 +12,7 @@ const trustItems = [
 export function Hero() {
   return (
     <section id="top" className="relative">
-      <div className="relative flex h-[100svh] min-h-[640px] w-full flex-col overflow-hidden bg-ink">
+      <div className="relative flex h-[100svh] min-h-[680px] w-full flex-col overflow-hidden bg-ink">
         <Image
           src="/images/heromain.jpg"
           alt="Drei lächelnde Frauen mit gepflegten Wimpern und Augenbrauen"
@@ -102,12 +102,12 @@ export function Hero() {
         <div className="h-8 shrink-0 sm:h-10 lg:h-14" aria-hidden />
       </div>
 
-      <div className="bg-white py-10 md:py-14">
+      <div className="bg-white pb-6 pt-12 md:pb-8 md:pt-14">
         <div className="container-studio">
-          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {trustItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
-                <li className="h-full border border-ink px-6 py-6">
+                <li className="flex h-full min-h-[168px] flex-col justify-center border border-ink/15 px-8 py-8">
                   <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
                   <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
                 </li>

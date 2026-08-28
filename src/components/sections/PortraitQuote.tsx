@@ -11,7 +11,7 @@ export function PortraitQuote() {
             alt="Nahaufnahme eines natürlich geschminkten Gesichts mit gepflegten Augenbrauen und Wimpern"
             fill
             sizes="(min-width: 768px) 60vw, 100vw"
-            className="object-contain"
+            className="object-contain object-top"
           />
         </Reveal>
 
@@ -21,7 +21,10 @@ export function PortraitQuote() {
         >
           <blockquote className="mx-auto max-w-[460px] text-center">
             <span aria-hidden className="mx-auto mb-4 block h-px w-10 bg-orchid/50" />
-            <p className="font-serif text-[2.1rem] leading-[1.35] tracking-[0.01em] text-ink sm:text-[2.4rem] md:text-[2.6rem] lg:text-[3rem]">
+            <p
+              className="font-serif leading-[1.35] tracking-[0.01em] text-ink"
+              style={{ fontSize: "clamp(2.5rem, 3.2vw, 4rem)" }}
+            >
               „Schönheit soll dich nicht verändern – sondern deinen{" "}
               <em className="text-orchid not-italic">Ausdruck</em> unterstreichen.“
             </p>

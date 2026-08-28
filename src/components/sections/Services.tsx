@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Services() {
   return (
-    <section id="leistungen" className="bg-white py-24 md:py-32">
+    <section id="leistungen" className="bg-white pb-24 pt-10 md:pb-32 md:pt-12 lg:pt-20">
       <div className="container-studio">
         <div className="mb-16 grid grid-cols-1 gap-8 lg:mb-24 lg:grid-cols-12 lg:items-end lg:gap-16">
           <Reveal className="lg:col-span-7">
@@ -24,13 +24,13 @@ export function Services() {
           </Reveal>
         </div>
 
-        <div className="flex flex-col gap-20 md:gap-28">
+        <div className="flex flex-col gap-16 md:gap-20 lg:gap-24">
           {services.map((service, index) => {
             const reversed = index % 2 === 1;
             return (
               <article
                 key={service.slug}
-                className={`grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10 lg:gap-16`}
+                className={`grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10 lg:gap-20`}
               >
                 <Reveal
                   image
@@ -41,7 +41,7 @@ export function Services() {
                       src={service.image}
                       alt={service.imageAlt}
                       fill
-                      loading={index === 0 ? "eager" : "lazy"}
+                      loading="lazy"
                       sizes="(min-width: 768px) 55vw, 100vw"
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
@@ -62,9 +62,9 @@ export function Services() {
                   </p>
                   <a
                     href="#preise"
-                    className="group/link mt-6 inline-flex items-center gap-3 text-sm font-medium tracking-wide text-ink"
+                    className="group/link mt-6 inline-flex items-center gap-3 py-1.5 text-sm font-medium tracking-wide text-ink"
                   >
-                    <span className="border-b border-orchid/60 pb-0.5 transition-colors group-hover/link:border-orchid">
+                    <span className="border-b border-orchid/60 pb-0.5 transition-colors group-hover/link:border-orchid group-hover/link:text-ink">
                       Preise ansehen
                     </span>
                     <svg

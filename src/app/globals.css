@@ -136,6 +136,15 @@ body {
   }
 }
 
+#leistungen,
+#ueber-anita,
+#ergebnisse,
+#preise,
+#faq,
+#kontakt {
+  scroll-margin-top: 96px;
+}
+
 .hairline {
   height: 1px;
   width: 100%;
