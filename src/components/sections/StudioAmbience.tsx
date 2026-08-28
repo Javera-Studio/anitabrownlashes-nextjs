@@ -33,28 +33,14 @@ export function StudioAmbience() {
           </Reveal>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-12 md:items-end md:gap-8">
-          <Reveal image className="relative aspect-[4/3] overflow-hidden md:col-span-8">
+        <div className="mt-12 md:mt-16">
+          <Reveal image className="relative aspect-[16/9] overflow-hidden md:aspect-[21/9]">
             <Image
               src={studioImages[0].src}
               alt={studioImages[0].alt}
               fill
               loading="lazy"
-              sizes="(min-width: 768px) 62vw, 100vw"
-              className="object-cover"
-            />
-          </Reveal>
-          <Reveal
-            image
-            delay={120}
-            className="relative mx-auto aspect-[4/3] w-full max-w-[280px] overflow-hidden md:col-span-4 md:mx-0 md:-mt-16 md:ml-auto md:aspect-[3/4]"
-          >
-            <Image
-              src={studioImages[1].src}
-              alt={studioImages[1].alt}
-              fill
-              loading="lazy"
-              sizes="(min-width: 768px) 22vw, 100vw"
+              sizes="100vw"
               className="object-cover"
             />
           </Reveal>
