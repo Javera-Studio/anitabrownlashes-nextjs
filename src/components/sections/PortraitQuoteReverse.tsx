@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { AiBadge } from "@/components/ui/AiBadge";
+import { AIImageBadge } from "@/components/ui/AIImageBadge";
 
 export function PortraitQuoteReverse() {
   return (
@@ -29,7 +29,7 @@ export function PortraitQuoteReverse() {
             sizes="(min-width: 768px) 60vw, 100vw"
             className="object-contain object-[75%_center]"
           />
-          <AiBadge />
+          <AIImageBadge />
         </Reveal>
       </div>
     </section>
