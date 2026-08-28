@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { priceJumpLinks } from "@/lib/data/priceList";
-import { AiLabel } from "@/components/ui/AiLabel";
 
 export function PriceHero() {
   return (
@@ -14,7 +13,6 @@ export function PriceHero() {
           sizes="100vw"
           className="object-cover"
         />
-        <AiLabel />
         <div className="pointer-events-none absolute inset-0 bg-ink/50" />
 
         <div className="relative z-10 mt-10 w-full max-w-2xl px-6 text-center text-white md:mt-14">

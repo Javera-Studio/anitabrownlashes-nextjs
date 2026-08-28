@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { AiLabel } from "@/components/ui/AiLabel";
 
 export function PortraitQuote() {
   return (
@@ -14,7 +13,6 @@ export function PortraitQuote() {
             sizes="(min-width: 768px) 60vw, 100vw"
             className="object-contain object-top"
           />
-          <AiLabel />
         </Reveal>
 
         <Reveal

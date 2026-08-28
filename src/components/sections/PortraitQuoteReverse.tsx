@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { AiLabel } from "@/components/ui/AiLabel";
 
 export function PortraitQuoteReverse() {
   return (
@@ -29,7 +28,6 @@ export function PortraitQuoteReverse() {
             sizes="(min-width: 768px) 60vw, 100vw"
             className="object-contain object-[75%_center]"
           />
-          <AiLabel className="bottom-3 left-3 md:left-auto md:right-3" />
         </Reveal>
       </div>
     </section>

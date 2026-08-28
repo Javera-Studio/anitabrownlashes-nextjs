@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { AiLabel } from "@/components/ui/AiLabel";
 
 const trustItems = [
   { title: "18+ Jahre Erfahrung", text: "Langjährige Expertise in Lash- & Brow-Styling." },
@@ -21,7 +20,6 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <AiLabel />
 
         {/* Vertical overlay: transparent/light on top and middle, warm dark only in the lower third */}
         <div
