@@ -41,8 +41,8 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 38%",
   },
   {
-    src: "/images/galerie14.jpg",
-    alt: "Zufriedene Kundin betrachtet das Ergebnis im Handspiegel",
+    src: "/images/galerie9.jpg",
+    alt: "Nahaufnahme einer Wimpernbehandlung mit Bürstchen und Unterlidpads",
     width: 1920,
     height: 1080,
   },
@@ -54,8 +54,8 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 20%",
   },
   {
-    src: "/images/galerie9.jpg",
-    alt: "Nahaufnahme einer Wimpernbehandlung mit Bürstchen und Unterlidpads",
+    src: "/images/galerie8.jpg",
+    alt: "Nahaufnahme von Auge und Augenbraue nach der Behandlung",
     width: 1920,
     height: 1080,
   },
@@ -67,8 +67,8 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 18%",
   },
   {
-    src: "/images/galerie8.jpg",
-    alt: "Nahaufnahme von Auge und Augenbraue nach der Behandlung",
+    src: "/images/galerie12.jpg",
+    alt: "Vorbereitete Behandlungsinstrumente auf einem Tablett im Studio",
     width: 1920,
     height: 1080,
   },
@@ -80,8 +80,8 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 30%",
   },
   {
-    src: "/images/galerie12.jpg",
-    alt: "Vorbereitete Behandlungsinstrumente auf einem Tablett im Studio",
+    src: "/images/galerie11.jpg",
+    alt: "Anita im Studio vor dem runden Spiegel mit dem Zitat an der Wand",
     width: 1920,
     height: 1080,
   },
@@ -93,8 +93,8 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 15%",
   },
   {
-    src: "/images/galerie11.jpg",
-    alt: "Anita im Studio vor dem runden Spiegel mit dem Zitat an der Wand",
+    src: "/images/galerie15.jpg",
+    alt: "Nahaufnahme eines Lash Liftings mit Silikonpad auf dem Lid",
     width: 1920,
     height: 1080,
   },
@@ -104,12 +104,6 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     width: 1080,
     height: 1920,
     focus: "center 55%",
-  },
-  {
-    src: "/images/galerie15.jpg",
-    alt: "Nahaufnahme eines Lash Liftings mit Silikonpad auf dem Lid",
-    width: 1920,
-    height: 1080,
   },
   {
     src: "/images/galerie16.jpg",
