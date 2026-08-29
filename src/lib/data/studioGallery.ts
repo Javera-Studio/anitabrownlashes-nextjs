@@ -11,7 +11,8 @@ export interface StudioGalleryImage {
  * Kuratierte Auswahl echter Studio- und Behandlungsfotos von Anita –
  * bewusst nicht in der Ordnerreihenfolge, sondern redaktionell gemischt.
  * Erstes Bild ist das große Hauptmotiv der Galerie, danach abwechselnd
- * Hoch- und Querformate für ein ruhiges Masonry-Raster.
+ * Hoch- und Querformate. Die letzten zwei Bilder (galerie6, galerie16)
+ * bilden den vergrößerten Abschluss der Section.
  */
 export const studioGalleryImages: StudioGalleryImage[] = [
   {
@@ -19,13 +20,6 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     alt: "Anita bei der Wimpernverlängerung einer Kundin im Profil",
     width: 1920,
     height: 1080,
-  },
-  {
-    src: "/images/galerie6.jpg",
-    alt: "Anita mit Pinzette vor der Studiowand mit dem Schriftzug „Beauty begins the moment you decide to be yourself“",
-    width: 1080,
-    height: 1920,
-    focus: "center 22%",
   },
   {
     src: "/images/galerie10.jpg",
@@ -104,6 +98,13 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     width: 1080,
     height: 1920,
     focus: "center 55%",
+  },
+  {
+    src: "/images/galerie6.jpg",
+    alt: "Anita mit Pinzette vor der Studiowand mit dem Schriftzug „Beauty begins the moment you decide to be yourself“",
+    width: 1080,
+    height: 1920,
+    focus: "center 22%",
   },
   {
     src: "/images/galerie16.jpg",

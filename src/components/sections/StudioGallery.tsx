@@ -10,6 +10,8 @@ export function StudioGallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const [hero, ...rest] = studioGalleryImages;
+  const gridImages = rest.slice(0, -2);
+  const closingImages = rest.slice(-2);
 
   return (
     <section className="bg-white pb-24 pt-[17px] md:pb-32 md:pt-[22px]">
@@ -50,7 +52,7 @@ export function StudioGallery() {
         </Reveal>
 
         <div className="mt-4 grid auto-rows-[130px] grid-cols-2 [grid-auto-flow:dense] gap-4 sm:grid-cols-3 sm:auto-rows-[160px] md:mt-5 md:gap-5">
-          {rest.map((img, i) => {
+          {gridImages.map((img, i) => {
             const realIndex = i + 1;
             const tall = img.height > img.width;
             return (
@@ -72,6 +74,32 @@ export function StudioGallery() {
                     fill
                     loading="lazy"
                     sizes="(min-width: 1024px) 32vw, (min-width: 640px) 48vw, 48vw"
+                    style={{ objectPosition: img.focus }}
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  />
+                </button>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        <div className="mt-4 grid grid-cols-2 gap-4 md:mt-5 md:gap-5">
+          {closingImages.map((img, j) => {
+            const realIndex = gridImages.length + 1 + j;
+            return (
+              <Reveal key={img.src} image delay={j * 90} className="relative overflow-hidden">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(realIndex)}
+                  aria-label={img.alt}
+                  className="group relative block aspect-[3/4] w-full overflow-hidden"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    loading="lazy"
+                    sizes="(min-width: 1280px) 620px, 50vw"
                     style={{ objectPosition: img.focus }}
                     className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   />
