@@ -10,7 +10,8 @@ export interface StudioGalleryImage {
 /**
  * Kuratierte Auswahl echter Studio- und Behandlungsfotos von Anita –
  * bewusst nicht in der Ordnerreihenfolge, sondern redaktionell gemischt.
- * Erstes Bild ist das große Hauptmotiv der Galerie.
+ * Erstes Bild ist das große Hauptmotiv der Galerie, danach abwechselnd
+ * Hoch- und Querformate für ein ruhiges Masonry-Raster.
  */
 export const studioGalleryImages: StudioGalleryImage[] = [
   {
@@ -27,15 +28,21 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 22%",
   },
   {
-    src: "/images/galerie2.jpg",
-    alt: "Hand mit Wimpern-Pads und Produkten während der Behandlungsvorbereitung",
-    width: 1080,
-    height: 1920,
-    focus: "center 30%",
-  },
-  {
     src: "/images/galerie10.jpg",
     alt: "Nahaufnahme einer Wimpernverlängerung mit Unterlidpads",
+    width: 1920,
+    height: 1080,
+  },
+  {
+    src: "/images/galerie4.jpg",
+    alt: "Wimpernverlängerung mit UV-Technik – einzelne Wimpern werden mit der Pinzette unter UV-Licht angesetzt",
+    width: 1080,
+    height: 1920,
+    focus: "center 38%",
+  },
+  {
+    src: "/images/galerie14.jpg",
+    alt: "Zufriedene Kundin betrachtet das Ergebnis im Handspiegel",
     width: 1920,
     height: 1080,
   },
@@ -47,17 +54,17 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 20%",
   },
   {
-    src: "/images/galerie1.jpg",
-    alt: "Reinigung der Arbeitsinstrumente im Ultraschallgerät im Studio",
-    width: 1080,
-    height: 1920,
-    focus: "center 55%",
-  },
-  {
-    src: "/images/galerie14.jpg",
-    alt: "Zufriedene Kundin betrachtet das Ergebnis im Handspiegel",
+    src: "/images/galerie9.jpg",
+    alt: "Nahaufnahme einer Wimpernbehandlung mit Bürstchen und Unterlidpads",
     width: 1920,
     height: 1080,
+  },
+  {
+    src: "/images/galerie5.jpg",
+    alt: "Anita bei der Behandlung einer Kundin unter dem Ringlicht, InLei-Produkte im Vordergrund",
+    width: 1080,
+    height: 1920,
+    focus: "center 18%",
   },
   {
     src: "/images/galerie8.jpg",
@@ -66,9 +73,49 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     height: 1080,
   },
   {
+    src: "/images/galerie2.jpg",
+    alt: "Hand mit Wimpern-Pads und Produkten während der Behandlungsvorbereitung",
+    width: 1080,
+    height: 1920,
+    focus: "center 30%",
+  },
+  {
+    src: "/images/galerie12.jpg",
+    alt: "Vorbereitete Behandlungsinstrumente auf einem Tablett im Studio",
+    width: 1920,
+    height: 1080,
+  },
+  {
+    src: "/images/galerie7.jpg",
+    alt: "Porträt von Anita mit Wimpern-Pinzette vor der Studiowand mit Zitat",
+    width: 1080,
+    height: 1920,
+    focus: "center 15%",
+  },
+  {
     src: "/images/galerie11.jpg",
     alt: "Anita im Studio vor dem runden Spiegel mit dem Zitat an der Wand",
     width: 1920,
     height: 1080,
+  },
+  {
+    src: "/images/galerie1.jpg",
+    alt: "Reinigung der Arbeitsinstrumente im Ultraschallgerät im Studio",
+    width: 1080,
+    height: 1920,
+    focus: "center 55%",
+  },
+  {
+    src: "/images/galerie15.jpg",
+    alt: "Nahaufnahme eines Lash Liftings mit Silikonpad auf dem Lid",
+    width: 1920,
+    height: 1080,
+  },
+  {
+    src: "/images/galerie16.jpg",
+    alt: "Anita in ihrem hellen Studio am Behandlungsplatz",
+    width: 1080,
+    height: 1920,
+    focus: "center 22%",
   },
 ];
