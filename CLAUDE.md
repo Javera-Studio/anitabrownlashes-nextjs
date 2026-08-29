@@ -200,4 +200,16 @@ Wenn Jagoda sagt „als KI generiert markiert" (oder sinngemäß „markiere als
 - Als wiederverwendbare Komponente umsetzen, nicht pro Bild einzeln inline duplizieren.
 - Barrierefreiheit beachten: Text muss auch per Tastatur/Fokus erreichbar sein, ausreichender Kontrast trotz Transparenz, `aria-label` am Icon für Screenreader.
 
-> Für dieses Projekt aktuell nicht aktiv: Anita hat das Label ausdrücklich wieder entfernen lassen. Erst bei erneuter expliziter Anweisung wieder einbauen (Referenzkomponente war `AiLabel`, siehe Git-Historie).
+## Aktueller Stand für dieses Projekt (AiLabel)
+
+Das Label ist aktiv und wird über die wiederverwendbare Komponente `src/components/ui/AiLabel.tsx` eingebunden. Aktuell verwendet auf: `Hero`, `PriceHero`, `Services` (je Leistungsbild) sowie `PortraitQuote` und `PortraitQuoteReverse`.
+
+Konkrete Optik (Stand zuletzt bestätigt):
+
+- **Positionierung:** immer unten links auf dem Bild – `className="bottom-3 left-3"` (Default der Komponente). Bei `PortraitQuote`/`PortraitQuoteReverse` liegt das Label in der inneren Aspect-Ratio-Box des Bildes, damit es auf dem Bild und nicht im einfarbigen Rand sitzt.
+- **Gesamttransparenz:** Wrapper-`<span>` hat `style={{ opacity: 0.9 }}` (gesamtes Label 10 % transparenter).
+- **Icon-Badge:** `h-5 w-5`, rund, `backdrop-blur-sm`, Text „AI" in `text-[8px] font-semibold text-white`; Inline-Style `backgroundColor: rgba(255,255,255,0.12)`, `border: 1px solid rgba(255,255,255,0.2)`, `opacity: 0.6`.
+- **Hover-/Fokus-Text:** „KI-generierte Bilddarstellung", fährt per `max-w`/`opacity` mit `duration-300` auf; Inline-Style `backgroundColor: rgba(255,255,255,0.13)`, `border: 1px solid rgba(255,255,255,0.2)`, `color: rgba(255,255,255,0.78)`, `rounded-md px-2 py-1 text-[10px]`.
+- **Barrierefreiheit:** `tabIndex={0}`, `aria-label="KI-generierte Bilddarstellung"` am Wrapper, `focus-visible:ring-2 focus-visible:ring-white/60`; der Hover-Text erscheint auch bei Tastatur-Fokus (`group-focus/ai`).
+
+Optik-Änderungen ausschließlich zentral in `AiLabel.tsx`, nie pro Bild inline.

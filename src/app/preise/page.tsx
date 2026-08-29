@@ -55,6 +55,13 @@ export default function PreisePage() {
             </h2>
           </Reveal>
 
+          <Reveal delay={80}>
+            <p className="mt-5 text-sm leading-relaxed text-ink-soft">
+              <span className="font-medium text-orchid">Bitte beachten:</span> Die
+              Bezahlung ist ausschließlich in bar möglich.
+            </p>
+          </Reveal>
+
           <div className="mt-10">
             <PriceAccordion groups={lashExtensionTechniques} />
           </div>

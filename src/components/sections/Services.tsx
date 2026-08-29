@@ -57,32 +57,20 @@ export function Services() {
                 </Reveal>
 
                 <Reveal delay={120} className={`md:col-span-6 ${reversed ? "md:order-1" : ""}`}>
-                  <span className="font-serif text-sm text-orchid tabular-nums">
-                    0{index + 1}
-                  </span>
-                  <h3 className="mt-3 font-serif text-3xl leading-snug text-ink md:text-4xl">
-                    {service.title}
+                  <h3 className="flex items-center gap-3 font-serif text-2xl leading-snug text-ink sm:gap-4 sm:text-3xl md:text-4xl">
+                    <span aria-hidden className="h-px flex-1 bg-orchid/50" />
+                    <span className="whitespace-nowrap text-center">{service.title}</span>
+                    <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                   </h3>
-                  <p className="mt-2 text-sm font-medium text-orchid">{service.short}</p>
+                  <p className="mt-4 text-sm font-medium text-orchid">{service.short}</p>
                   <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
                     {service.description}
                   </p>
                   <a
                     href={`/preise#${service.slug}`}
-                    className="group/link mt-6 inline-flex items-center gap-3 py-1.5 text-sm font-medium tracking-wide text-ink"
+                    className="mt-6 inline-flex items-center justify-center rounded-none border border-orchid bg-paper px-8 py-3 text-sm font-medium tracking-wide text-orchid transition-colors duration-300 hover:bg-orchid hover:text-white"
                   >
-                    <span className="border-b border-orchid/60 pb-0.5 transition-colors group-hover/link:border-orchid group-hover/link:text-ink">
-                      Preise ansehen
-                    </span>
-                    <svg
-                      viewBox="0 0 16 16"
-                      className="h-3 w-3 text-orchid transition-transform group-hover/link:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      <path d="M2 8h11M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                    Preise ansehen
                   </a>
                 </Reveal>
               </article>

@@ -9,6 +9,19 @@ export function Footer() {
         <div className="hairline bg-white/10" />
         <div className="flex flex-col gap-8 py-10 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              aria-label="Anita Brows &amp; Lashes – Startseite"
+              className="mr-1 shrink-0"
+            >
+              <Image
+                src="/images/logo.png"
+                alt="Anita Brows &amp; Lashes Logo"
+                width={83}
+                height={83}
+                className="opacity-80 transition-opacity hover:opacity-100"
+              />
+            </Link>
             <a
               href={business.instagram}
               target="_blank"
@@ -57,15 +70,6 @@ export function Footer() {
             </a>
           </div>
           <div>{business.copyright}</div>
-          <Link href="/" aria-label="Anita Brows &amp; Lashes – Startseite" className="mt-4">
-            <Image
-              src="/images/logo.png"
-              alt="Anita Brows &amp; Lashes Logo"
-              width={64}
-              height={64}
-              className="opacity-80 transition-opacity hover:opacity-100"
-            />
-          </Link>
         </div>
       </div>
     </footer>
