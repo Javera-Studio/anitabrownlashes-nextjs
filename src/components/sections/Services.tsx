@@ -33,12 +33,9 @@ export function Services() {
                 key={service.slug}
                 className={`grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-10 lg:gap-20`}
               >
-                <Reveal
-                  image
-                  className={`md:col-span-6 ${reversed ? "md:order-2" : ""}`}
-                >
+                <div className={`md:col-span-6 ${reversed ? "md:order-2" : ""}`}>
                   <div
-                    className={`group relative aspect-[4/5] w-full overflow-hidden bg-lilac/40 md:w-[clamp(496px,37vw,544px)] ${
+                    className={`relative aspect-[4/5] w-full overflow-hidden bg-lilac/40 md:w-[clamp(496px,37vw,544px)] ${
                       reversed ? "md:ml-auto" : ""
                     }`}
                   >
@@ -49,12 +46,11 @@ export function Services() {
                       loading="lazy"
                       sizes="(min-width: 768px) min(37vw, 544px), 100vw"
                       style={{ objectPosition: service.imageFocus }}
-                      className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
+                      className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <AiLabel />
                   </div>
-                </Reveal>
+                </div>
 
                 <Reveal delay={120} className={`md:col-span-6 ${reversed ? "md:order-1" : ""}`}>
                   <h3 className="flex items-center gap-3 font-serif text-2xl leading-snug text-ink sm:gap-4 sm:text-3xl md:text-4xl">
@@ -62,7 +58,7 @@ export function Services() {
                     <span className="whitespace-nowrap text-center">{service.title}</span>
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                   </h3>
-                  <p className="mt-7 text-sm font-medium text-orchid">{service.short}</p>
+                  <p className="mt-[5.25rem] text-sm font-medium text-orchid">{service.short}</p>
                   <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
                     {service.description}
                   </p>

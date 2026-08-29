@@ -2,7 +2,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Statement() {
   return (
-    <section className="bg-ink py-28 md:py-40">
+    <section className="bg-ink py-[4.9rem] md:py-28">
       <div className="container-studio">
         <Reveal className="mx-auto max-w-4xl text-center">
           <p className="font-serif text-[2rem] leading-[1.45] tracking-[0.02em] text-white sm:text-[2.6rem] md:text-[3.2rem]">
