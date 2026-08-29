@@ -14,7 +14,7 @@ export function PortraitQuote() {
             sizes="(min-width: 768px) 60vw, 100vw"
             className="object-contain object-top"
           />
-          <AiLabel />
+          <AiLabel className="left-3 top-3" />
         </Reveal>
 
         <Reveal

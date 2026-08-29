@@ -24,6 +24,4 @@ export const resultImages: GalleryImage[] = [
   { src: "/images/wimperverl7.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
   { src: "/images/wimperverl5.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
   { src: "/images/wimperverl9.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
-  { src: "/images/wimperverl6.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
-  { src: "/images/wimperverl8.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
 ];

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { AiLabel } from "@/components/ui/AiLabel";
 
 export function PortraitQuoteReverse() {
   return (
@@ -26,8 +27,9 @@ export function PortraitQuoteReverse() {
             alt="Nahaufnahme einer Frau mit zusammengebundenen Haaren und natürlichem Make-up"
             fill
             sizes="(min-width: 768px) 60vw, 100vw"
-            className="object-contain object-[75%_center]"
+            className="object-contain object-[75%_bottom]"
           />
+          <AiLabel className="left-3 bottom-3" />
         </Reveal>
       </div>
     </section>
