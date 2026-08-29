@@ -38,7 +38,7 @@ export function PriceGallery({ images }: PriceGalleryProps) {
       </div>
 
       {/* Desktop: asymmetrisches Editorial-Layout, kompakt und mittig */}
-      <div className="hidden gap-[15px] md:mx-auto md:grid md:w-[62vw] md:max-w-[1180px] md:grid-cols-[1.7fr_1fr]">
+      <div className="hidden gap-[24px] md:mx-auto md:grid md:w-[62vw] md:max-w-[1180px] md:grid-cols-[1.7fr_1fr]">
         <div className="group relative aspect-[4/5] overflow-hidden">
           <Image
             src={lead.src}
@@ -49,7 +49,7 @@ export function PriceGallery({ images }: PriceGalleryProps) {
             className={imgClass}
           />
         </div>
-        <div className="grid h-full grid-rows-3 gap-[15px]">
+        <div className="grid h-full grid-rows-3 gap-[24px]">
           {secondary.map((img) => (
             <div key={img.src} className="group relative overflow-hidden">
               <Image
