@@ -6,15 +6,17 @@ export function PortraitQuote() {
   return (
     <section className="w-full overflow-hidden">
       <div className="flex flex-col md:h-[640px] md:flex-row lg:h-[680px]">
-        <Reveal className="relative aspect-[3/2] w-full bg-rose/50 md:h-full md:w-[58%] md:aspect-auto lg:w-[60%]">
-          <Image
-            src="/images/hero2.jpg"
-            alt="Nahaufnahme eines natürlich geschminkten Gesichts mit gepflegten Augenbrauen und Wimpern"
-            fill
-            sizes="(min-width: 768px) 60vw, 100vw"
-            className="object-contain object-top"
-          />
-          <AiLabel className="left-3 top-3" />
+        <Reveal className="relative w-full bg-rose/50 md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]">
+          <div className="relative aspect-[3/2] w-full max-h-full">
+            <Image
+              src="/images/hero2.jpg"
+              alt="Nahaufnahme eines natürlich geschminkten Gesichts mit gepflegten Augenbrauen und Wimpern"
+              fill
+              sizes="(min-width: 768px) 60vw, 100vw"
+              className="object-cover"
+            />
+            <AiLabel className="bottom-3 left-3" />
+          </div>
         </Reveal>
 
         <Reveal

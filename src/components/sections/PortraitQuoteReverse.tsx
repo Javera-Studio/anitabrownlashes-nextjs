@@ -20,16 +20,18 @@ export function PortraitQuoteReverse() {
         </Reveal>
 
         <Reveal
-          className="relative order-1 aspect-[3/2] w-full bg-lilac/50 md:order-none md:h-full md:w-[58%] md:aspect-auto lg:w-[60%]"
+          className="relative order-1 w-full bg-lilac/50 md:order-none md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]"
         >
-          <Image
-            src="/images/hero3.jpg"
-            alt="Nahaufnahme einer Frau mit zusammengebundenen Haaren und natürlichem Make-up"
-            fill
-            sizes="(min-width: 768px) 60vw, 100vw"
-            className="object-contain object-[75%_bottom]"
-          />
-          <AiLabel className="left-3 bottom-3" />
+          <div className="relative aspect-[2/1] w-full max-h-full">
+            <Image
+              src="/images/hero3.jpg"
+              alt="Nahaufnahme einer Frau mit zusammengebundenen Haaren und natürlichem Make-up"
+              fill
+              sizes="(min-width: 768px) 60vw, 100vw"
+              className="object-cover"
+            />
+            <AiLabel className="bottom-3 left-3" />
+          </div>
         </Reveal>
       </div>
     </section>

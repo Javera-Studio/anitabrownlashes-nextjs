@@ -1,4 +1,5 @@
 import type { PriceRow } from "@/lib/data/priceList";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function PriceRows({ rows }: { rows: PriceRow[] }) {
   return (
@@ -8,9 +9,10 @@ export function PriceRows({ rows }: { rows: PriceRow[] }) {
         <span className="price-duration">Dauer</span>
         <span className="price-price">Preis</span>
       </div>
-      {rows.map((row) => (
-        <div
+      {rows.map((row, i) => (
+        <Reveal
           key={row.treatment}
+          delay={(i % 6) * 60}
           className="price-row border-b border-border py-3.5 last:border-b-0"
         >
           <span className="price-treatment text-[0.95rem] leading-snug text-ink sm:text-base">
@@ -22,7 +24,7 @@ export function PriceRows({ rows }: { rows: PriceRow[] }) {
           <span className="price-price text-sm font-semibold text-ink tabular-nums sm:text-base">
             {row.price}
           </span>
-        </div>
+        </Reveal>
       ))}
     </div>
   );

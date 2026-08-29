@@ -30,8 +30,7 @@ export function Gallery() {
           {resultImages.map((img, i) => (
             <Reveal
               key={img.src}
-              image
-              delay={(i % 3) * 100}
+              delay={(i % 3) * 120}
               className="relative aspect-[3/4] overflow-hidden bg-lilac/40"
             >
               <Image
