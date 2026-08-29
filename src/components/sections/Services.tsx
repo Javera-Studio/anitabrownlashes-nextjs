@@ -43,6 +43,7 @@ export function Services() {
                       fill
                       loading="lazy"
                       sizes="(min-width: 768px) 55vw, 100vw"
+                      style={{ objectPosition: service.imageFocus }}
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
