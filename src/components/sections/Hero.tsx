@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 
 const trustItems = [
-  { title: "18+ Jahre Erfahrung", text: "Langjährige Expertise in Lash- & Brow-Styling." },
+  { title: "6 Jahre Erfahrung", text: "Langjährige Expertise in Lash- & Brow-Styling." },
   { title: "Premium-Produkte", text: "Ausschließlich hochwertige, ausgewählte Produkte." },
   { title: "Persönliche Beratung", text: "Individuell abgestimmt auf Ihre Wünsche." },
   { title: "Studio im 1. Bezirk", text: "Zentrale Lage im Herzen Wiens." },
@@ -55,7 +55,7 @@ export function Hero() {
             <Reveal delay={480} duration={1400}>
               <p className="mx-auto mt-5 max-w-[620px] text-[1.15rem] leading-[1.5] text-white/90 md:text-[1.35rem]">
                 Wimpernverlängerung, Lash &amp; Brow Lifting in Wien – individuell
-                abgestimmt und mit über 18 Jahren Erfahrung.
+                abgestimmt und mit über 6 Jahren Erfahrung.
               </p>
             </Reveal>
 

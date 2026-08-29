@@ -36,7 +36,7 @@ export function Footer() {
 
           <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
             <a href="#leistungen" className="hover:text-white transition-colors">Leistungen</a>
-            <a href="#preise" className="hover:text-white transition-colors">Preise</a>
+            <Link href="/preise" className="hover:text-white transition-colors">Preise</Link>
             <a href="#kontakt" className="hover:text-white transition-colors">Kontakt</a>
             <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <Link href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</Link>

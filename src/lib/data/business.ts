@@ -8,35 +8,44 @@ export const business = {
   whatsapp: "https://wa.me/4369917160022",
   website: "https://wimpernverlangerungwien.at/",
   address: {
-    street: "Am Hof Färbergasse 4",
+    street: "Ledererhof 7/4",
     zip: "1010",
     city: "Wien",
     country: "AT",
-    full: "Am Hof Färbergasse 4, 1010 Wien",
+    full: "Ledererhof 7/4, 1010 Wien",
   },
   geo: {
-    latitude: 48.2103,
-    longitude: 16.3691,
+    latitude: 48.2107,
+    longitude: 16.3661,
   },
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
-    encodeURIComponent("Anita Brows & Lashes 1010 Wien Am Hof Färbergasse 4"),
+    encodeURIComponent("Anita Brows & Lashes 1010 Wien Ledererhof 7/4"),
   mapsEmbedUrl:
     "https://www.google.com/maps?q=" +
-    encodeURIComponent("Anita Brows & Lashes, Am Hof Färbergasse 4, 1010 Wien") +
+    encodeURIComponent("Anita Brows & Lashes, Ledererhof 7/4, 1010 Wien") +
     "&output=embed",
   instagram: "https://www.instagram.com/anita.browslashes/",
   instagramHandle: "@anita.browslashes",
   facebook: "https://www.facebook.com/100080103438845/",
+  paymentNote: "Zahlung vor Ort ausschließlich in bar.",
+  transit: [
+    { line: "U1", stop: "Stephansplatz" },
+    { line: "U3", stop: "Herrengasse" },
+  ],
+  parking: "Parkgarage Am Hof / beim Park Hyatt Vienna",
   openingHours: [
-    { days: "Montag – Dienstag", hours: "10:00 – 18:00" },
-    { days: "Mittwoch", hours: "Geschlossen" },
-    { days: "Donnerstag – Freitag", hours: "10:00 – 18:00" },
-    { days: "Samstag – Sonntag", hours: "Geschlossen" },
+    { days: "Montag – Freitag", hours: "10:00 – 19:00" },
+    { days: "Samstag", hours: "10:00 – 18:00" },
+    { days: "Sonntag", hours: "Geschlossen" },
   ],
   openingHoursSchema: [
-    { dayOfWeek: ["Monday", "Tuesday"], opens: "10:00", closes: "18:00" },
-    { dayOfWeek: ["Thursday", "Friday"], opens: "10:00", closes: "18:00" },
+    {
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "10:00",
+      closes: "19:00",
+    },
+    { dayOfWeek: ["Saturday"], opens: "10:00", closes: "18:00" },
   ],
   copyright: "© 2026 Anita Brows & Lashes",
 } as const;

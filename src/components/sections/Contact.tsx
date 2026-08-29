@@ -47,6 +47,19 @@ export function Contact() {
               <p className="mt-2 text-sm italic text-white/50">
                 Termine ausschließlich nach Vereinbarung.
               </p>
+              <p className="mt-1 text-sm italic text-white/50">{business.paymentNote}</p>
+            </div>
+
+            <div>
+              <span className="eyebrow text-rose">Anfahrt</span>
+              <ul className="mt-2 space-y-1 text-sm text-white/80">
+                {business.transit.map((t) => (
+                  <li key={t.line}>
+                    <span className="font-medium text-white">{t.line}</span> – {t.stop}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-1.5 text-sm text-white/70">Parken: {business.parking}</p>
             </div>
 
             <div className="space-y-5">

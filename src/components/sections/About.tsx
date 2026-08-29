@@ -42,7 +42,7 @@ export function About() {
 
             <Reveal delay={120} className="mt-8 max-w-xl space-y-5 text-base leading-relaxed text-ink-soft md:text-[1.05rem]">
               <p>
-                Seit über 18 Jahren begleite ich meine Kundinnen mit Leidenschaft und
+                Seit über 6 Jahren begleite ich meine Kundinnen mit Leidenschaft und
                 einem hohen Qualitätsanspruch durch die Welt der Beauty.
               </p>
               <p>
@@ -64,7 +64,7 @@ export function About() {
             <Reveal delay={220}>
               <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
                 {[
-                  { title: "18+ Jahre Erfahrung", text: "Kontinuierliche Weiterbildung in aktuellen Techniken." },
+                  { title: "6 Jahre Erfahrung", text: "Kontinuierliche Weiterbildung in aktuellen Techniken." },
                   { title: "Premium-Qualität", text: "Höchste Hygienestandards, langlebige Ergebnisse." },
                   { title: "Persönlich abgestimmt", text: "Individuell auf Wunsch und Gesichtsform." },
                 ].map((v) => (

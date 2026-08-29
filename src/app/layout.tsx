@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Anita Brows & Lashes",
   },
   description:
-    "Wimpernverlängerung, Lash Lifting und Brow Lifting im Herzen Wiens. Über 18 Jahre Erfahrung, hochwertige Produkte und persönliche Beratung im Studio am Hof, 1010 Wien.",
+    "Wimpernverlängerung, Lash Lifting und Brow Lifting im Herzen Wiens. 6 Jahre Erfahrung, hochwertige Produkte und persönliche Beratung im Studio in 1010 Wien.",
   keywords: [
     "Wimpernverlängerung Wien",
     "Lash Lifting Wien",
