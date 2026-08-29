@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { services } from "@/lib/data/services";
 import { Reveal } from "@/components/ui/Reveal";
+import { AiLabel } from "@/components/ui/AiLabel";
 
 export function Services() {
   return (
@@ -47,6 +48,7 @@ export function Services() {
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <AiLabel />
                   </div>
                 </Reveal>
 
