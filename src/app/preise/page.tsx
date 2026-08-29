@@ -19,6 +19,13 @@ const wimpernGalleryImages = [
   { src: "/images/wimperverl4.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
 ];
 
+const lashliftGalleryImages = [
+  { src: "/images/lashlift1.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift2.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift3.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+  { src: "/images/lashlift4.jpg", alt: "Ergebnis eines Lash Liftings, Nahaufnahme" },
+];
+
 export const metadata: Metadata = {
   title: "Preise | Anita Brows & Lashes Wien",
   description:
@@ -80,7 +87,26 @@ export default function PreisePage() {
               <PriceGroup key={group.title} {...group} />
             ))}
           </div>
+        </div>
 
+        <div className="container-studio mt-10">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+            {lashliftGalleryImages.map((img) => (
+              <div key={img.src} className="group relative aspect-square overflow-hidden bg-lilac/30">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="container-studio max-w-[540px]">
           <div className="mt-10">
             <BookingButton label="Termin buchen" />
           </div>

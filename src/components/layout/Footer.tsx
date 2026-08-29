@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { business } from "@/lib/data/business";
 
 export function Footer() {
@@ -56,6 +57,15 @@ export function Footer() {
             </a>
           </div>
           <div>{business.copyright}</div>
+          <Link href="/" aria-label="Anita Brows &amp; Lashes – Startseite" className="mt-4">
+            <Image
+              src="/images/logo.png"
+              alt="Anita Brows &amp; Lashes Logo"
+              width={64}
+              height={64}
+              className="opacity-80 transition-opacity hover:opacity-100"
+            />
+          </Link>
         </div>
       </div>
     </footer>
