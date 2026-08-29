@@ -22,7 +22,9 @@ export function About() {
 
             <Reveal delay={150} className="relative mx-auto mt-9 max-w-lg border-l border-orchid/50 pl-6">
               <blockquote className="font-serif text-xl italic leading-snug text-ink md:text-2xl">
-                &ldquo;Deine Schönheit ist schon da. Ich gebe ihr Ausdruck.&rdquo;
+                &ldquo;Deine Schönheit ist schon da.
+                <br />
+                Ich gebe ihr Ausdruck.&rdquo;
               </blockquote>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                 Für mich bedeutet natürliche Schönheit nicht, sich zu verändern –

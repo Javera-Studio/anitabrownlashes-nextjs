@@ -8,7 +8,7 @@ export function AiLabel({ className = "bottom-3 left-3" }: { className?: string 
       <span
         aria-hidden
         className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full backdrop-blur-sm text-[8px] font-semibold tracking-tight text-white"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.15)", border: "1px solid rgba(255, 255, 255, 0.25)", opacity: 0.75 }}
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.12)", border: "1px solid rgba(255, 255, 255, 0.2)", opacity: 0.6 }}
       >
         AI
       </span>

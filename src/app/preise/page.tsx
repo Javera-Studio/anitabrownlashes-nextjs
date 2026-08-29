@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { BookingButton } from "@/components/ui/BookingButton";
 import { PriceHero } from "@/components/sections/PriceHero";
 import { PriceAccordion } from "@/components/pricing/PriceAccordion";
@@ -10,6 +11,13 @@ import {
   browGroups,
   comboPackageRows,
 } from "@/lib/data/priceList";
+
+const wimpernGalleryImages = [
+  { src: "/images/wimperverl1.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl2.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl3.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/wimperverl4.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+];
 
 export const metadata: Metadata = {
   title: "Preise | Anita Brows & Lashes Wien",
@@ -33,7 +41,26 @@ export default function PreisePage() {
           <div className="mt-10">
             <PriceAccordion groups={lashExtensionTechniques} />
           </div>
+        </div>
 
+        <div className="container-studio mt-10">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+            {wimpernGalleryImages.map((img) => (
+              <div key={img.src} className="group relative aspect-square overflow-hidden bg-lilac/30">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  loading="lazy"
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="container-studio max-w-[540px]">
           <div className="mt-10">
             <BookingButton label="Termin buchen" />
           </div>

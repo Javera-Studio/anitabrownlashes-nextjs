@@ -12,7 +12,9 @@ export function Gallery() {
           </Reveal>
           <Reveal delay={100}>
             <h2 className="max-w-2xl font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
-              Echte Ergebnisse, <em className="text-orchid not-italic">echte Blicke</em>.
+              Echte Ergebnisse,
+              <br />
+              <em className="text-orchid not-italic">echte Blicke</em>.
             </h2>
           </Reveal>
           <Reveal delay={180}>
