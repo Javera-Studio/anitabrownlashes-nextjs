@@ -62,7 +62,7 @@ export function Services() {
                     <span className="whitespace-nowrap text-center">{service.title}</span>
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                   </h3>
-                  <p className="mt-4 text-sm font-medium text-orchid">{service.short}</p>
+                  <p className="mt-7 text-sm font-medium text-orchid">{service.short}</p>
                   <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
                     {service.description}
                   </p>

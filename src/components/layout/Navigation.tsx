@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { navLinks, bookingUrl } from "@/lib/data/business";
 
@@ -42,11 +43,17 @@ export function Navigation() {
       <div className="container-studio flex h-20 items-center justify-between md:h-[92px]">
         <Link
           href={isHome ? "#top" : "/"}
-          className={`font-serif text-xl tracking-[0.01em] transition-colors duration-300 md:text-2xl ${
-            solid ? "text-ink" : "text-white"
-          }`}
+          aria-label="Anita Brows &amp; Lashes – Startseite"
+          className="flex shrink-0 items-center"
         >
-          Anita<span className="text-orchid"> Brows</span> &amp; Lashes
+          <Image
+            src="/images/logo.png"
+            alt="Anita Brows &amp; Lashes"
+            width={64}
+            height={64}
+            priority
+            className="h-11 w-11 object-contain sm:h-14 sm:w-14 lg:h-16 lg:w-16"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
