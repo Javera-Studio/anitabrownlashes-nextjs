@@ -7,22 +7,22 @@ export function About() {
     <section id="ueber-anita" className="bg-rose/30 py-24 md:py-32">
       <div className="container-studio">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
-          <div className="lg:col-span-5">
-            <Reveal image className="relative mx-auto max-w-md">
+          <div className="lg:col-span-6">
+            <Reveal image className="relative mx-auto max-w-lg">
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-white">
                 <Image
                   src="/images/anita1.jpg"
                   alt="Anita Lakatos – Inhaberin von Anita Brows & Lashes in ihrem Studio"
                   fill
-                  sizes="(min-width: 1024px) 35vw, 90vw"
+                  sizes="(min-width: 1024px) 42vw, 90vw"
                   className="object-cover"
                 />
               </div>
             </Reveal>
 
-            <Reveal delay={150} className="relative mx-auto mt-9 max-w-md border-l border-orchid/50 pl-6">
+            <Reveal delay={150} className="relative mx-auto mt-9 max-w-lg border-l border-orchid/50 pl-6">
               <blockquote className="font-serif text-xl italic leading-snug text-ink md:text-2xl">
-                &ldquo;Beauty begins the moment you decide to be yourself.&rdquo;
+                &ldquo;Deine Schönheit ist schon da. Ich gebe ihr Ausdruck.&rdquo;
               </blockquote>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                 Für mich bedeutet natürliche Schönheit nicht, sich zu verändern –
@@ -31,7 +31,7 @@ export function About() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <Reveal>
               <span className="eyebrow">Ein paar Worte von mir</span>
               <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
