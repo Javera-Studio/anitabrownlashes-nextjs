@@ -41,7 +41,7 @@ export function Instagram() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="lg:-translate-x-1/2">
+            <div className="flex justify-center">
               <InstagramPhone />
             </div>
           </div>

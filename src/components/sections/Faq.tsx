@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { business } from "@/lib/data/business";
 
 export function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
     <section id="faq" className="bg-white py-24 md:py-32">

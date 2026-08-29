@@ -6,12 +6,36 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Lightbox } from "@/components/ui/Lightbox";
 import { studioGalleryImages } from "@/lib/data/studioGallery";
 
+/**
+ * Editorial-Collage: geschlossenes CSS-Grid ohne Lücken.
+ * Desktop (sm+): 6-Spalten-Grid, fünf handgesetzte 6×3-Bänder – jedes Band füllt
+ * seine drei Zeilen vollständig, dadurch saubere obere/untere Kante.
+ * Mobile: 2-Spalten-Grid, Muster [row-span 2 / 3 / 1] je Dreiergruppe – ebenfalls
+ * lückenlos und mit unterschiedlichen Bildhöhen.
+ * Reihenfolge/Anzahl der Bilder muss zu studioGalleryImages passen.
+ */
+const layout = [
+  "sm:col-span-4 sm:row-span-3",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-4 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-4 sm:row-span-2",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-1",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-2 sm:row-span-3",
+  "sm:col-span-3 sm:row-span-3",
+  "sm:col-span-3 sm:row-span-3",
+];
+
+const mobileRowSpan = ["row-span-2", "row-span-3", "row-span-1"];
+
 export function StudioGallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const [hero, ...rest] = studioGalleryImages;
-  const gridImages = rest.slice(0, -2);
-  const closingImages = rest.slice(-2);
 
   return (
     <section className="bg-white pb-24 pt-[17px] md:pb-32 md:pt-[22px]">
@@ -32,39 +56,20 @@ export function StudioGallery() {
           </Reveal>
         </div>
 
-        <Reveal image>
-          <button
-            type="button"
-            onClick={() => setOpenIndex(0)}
-            aria-label={hero.alt}
-            className="group relative block w-full overflow-hidden"
-          >
-            <Image
-              src={hero.src}
-              alt={hero.alt}
-              width={hero.width}
-              height={hero.height}
-              loading="lazy"
-              sizes="(min-width: 1280px) 1200px, 100vw"
-              className="h-auto w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-            />
-          </button>
-        </Reveal>
-
-        <div className="mt-4 grid auto-rows-[130px] grid-cols-2 [grid-auto-flow:dense] gap-4 sm:grid-cols-3 sm:auto-rows-[160px] md:mt-5 md:gap-5">
-          {gridImages.map((img, i) => {
-            const realIndex = i + 1;
-            const tall = img.height > img.width;
+        <div className="grid auto-rows-[128px] grid-cols-2 gap-4 sm:auto-rows-[150px] sm:grid-cols-6 sm:gap-[18px] md:auto-rows-[168px]">
+          {studioGalleryImages.map((img, i) => {
+            const wide = layout[i]?.includes("col-span-4");
+            const half = layout[i]?.includes("col-span-3");
             return (
               <Reveal
                 key={img.src}
                 image
-                delay={(i % 3) * 90}
-                className={`relative overflow-hidden ${tall ? "row-span-2" : "row-span-1"}`}
+                delay={(i % 3) * 80}
+                className={`relative overflow-hidden col-span-1 ${mobileRowSpan[i % 3]} ${layout[i] ?? ""}`}
               >
                 <button
                   type="button"
-                  onClick={() => setOpenIndex(realIndex)}
+                  onClick={() => setOpenIndex(i)}
                   aria-label={img.alt}
                   className="group relative block h-full w-full overflow-hidden"
                 >
@@ -73,35 +78,15 @@ export function StudioGallery() {
                     alt={img.alt}
                     fill
                     loading="lazy"
-                    sizes="(min-width: 1024px) 32vw, (min-width: 640px) 48vw, 48vw"
+                    sizes={
+                      wide
+                        ? "(min-width: 640px) 55vw, 50vw"
+                        : half
+                          ? "(min-width: 640px) 42vw, 50vw"
+                          : "(min-width: 640px) 30vw, 50vw"
+                    }
                     style={{ objectPosition: img.focus }}
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
-                  />
-                </button>
-              </Reveal>
-            );
-          })}
-        </div>
-
-        <div className="mt-4 grid grid-cols-2 gap-4 md:mt-5 md:gap-5">
-          {closingImages.map((img, j) => {
-            const realIndex = gridImages.length + 1 + j;
-            return (
-              <Reveal key={img.src} image delay={j * 90} className="relative overflow-hidden">
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(realIndex)}
-                  aria-label={img.alt}
-                  className="group relative block aspect-[3/4] w-full overflow-hidden"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    loading="lazy"
-                    sizes="(min-width: 1280px) 620px, 50vw"
-                    style={{ objectPosition: img.focus }}
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                   />
                 </button>
               </Reveal>

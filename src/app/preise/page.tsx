@@ -31,7 +31,7 @@ const browliftGalleryImages = [
   { src: "/images/browlift1.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
   { src: "/images/browlift2.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
   { src: "/images/browlift3.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
-  { src: "/images/browlift4.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme" },
+  { src: "/images/browlift4.jpg", alt: "Ergebnis eines Brow Liftings, Nahaufnahme", focus: "center 18%" },
 ];
 
 export const metadata: Metadata = {

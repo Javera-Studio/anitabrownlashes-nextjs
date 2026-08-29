@@ -3,6 +3,8 @@ import Image from "next/image";
 export interface PriceGalleryImage {
   src: string;
   alt: string;
+  /** CSS object-position, falls der Standard-Ausschnitt ungünstig zuschneidet. */
+  focus?: string;
 }
 
 interface PriceGalleryProps {
@@ -10,7 +12,8 @@ interface PriceGalleryProps {
 }
 
 const imgClass =
-  "object-cover object-[center_38%] transition-transform duration-500 ease-out group-hover:scale-[1.03]";
+  "object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]";
+const DEFAULT_FOCUS = "center 38%";
 
 /**
  * Ergebnis-Galerie einer Leistung auf der Preisseite.
@@ -31,7 +34,15 @@ export function PriceGallery({ images }: PriceGalleryProps) {
         <div className="grid grid-cols-2 gap-[15px]">
           {tiles.map((img) => (
             <div key={img.src} className="group relative aspect-square overflow-hidden">
-              <Image src={img.src} alt={img.alt} fill loading="lazy" sizes="50vw" className={imgClass} />
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                loading="lazy"
+                sizes="50vw"
+                style={{ objectPosition: img.focus ?? DEFAULT_FOCUS }}
+                className={imgClass}
+              />
             </div>
           ))}
         </div>
@@ -46,6 +57,7 @@ export function PriceGallery({ images }: PriceGalleryProps) {
             fill
             loading="lazy"
             sizes="(min-width: 768px) 40vw, 100vw"
+            style={{ objectPosition: lead.focus ?? DEFAULT_FOCUS }}
             className={imgClass}
           />
         </div>
@@ -58,6 +70,7 @@ export function PriceGallery({ images }: PriceGalleryProps) {
                 fill
                 loading="lazy"
                 sizes="(min-width: 768px) 24vw, 100vw"
+                style={{ objectPosition: img.focus ?? DEFAULT_FOCUS }}
                 className={imgClass}
               />
             </div>
