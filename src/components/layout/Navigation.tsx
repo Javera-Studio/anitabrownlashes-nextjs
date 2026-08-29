@@ -52,7 +52,7 @@ export function Navigation() {
             width={64}
             height={64}
             priority
-            className="h-11 w-11 object-contain sm:h-14 sm:w-14 lg:h-16 lg:w-16"
+            className="h-[53px] w-[53px] object-contain sm:h-[67px] sm:w-[67px] lg:h-[77px] lg:w-[77px]"
           />
         </Link>
 
