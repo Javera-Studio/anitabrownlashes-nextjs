@@ -3,6 +3,7 @@ export function AiLabel({ className = "bottom-3 left-3" }: { className?: string 
     <span
       tabIndex={0}
       aria-label="KI-generierte Bilddarstellung"
+      style={{ opacity: 0.9 }}
       className={`group/ai absolute z-10 inline-flex cursor-default items-center gap-1.5 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${className}`}
     >
       <span

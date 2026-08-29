@@ -9,7 +9,7 @@ export function Contact() {
           <span className="eyebrow text-rose">Ihr Besuch</span>
           <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-white sm:text-5xl">
             Schönheit beginnt mit{" "}
-            <em className="text-rose not-italic">einem Termin</em>.
+            <em className="text-accent-on-dark not-italic">einem Termin</em>.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/70">
             Ob Wimpern oder Brows – ich nehme mir Zeit für Ihre Wünsche und freue

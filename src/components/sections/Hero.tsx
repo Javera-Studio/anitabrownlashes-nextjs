@@ -50,7 +50,7 @@ export function Hero() {
             <Reveal delay={240} duration={1400}>
               <h1 className="mt-5 font-serif text-[2.47rem] leading-[1.1] tracking-[0.01em] text-balance sm:text-[2.9rem] md:text-[3.4rem] lg:whitespace-nowrap lg:text-[3.9rem] xl:text-[4.25rem]"
                   style={{ textShadow: "0 2px 18px rgba(0,0,0,0.22)" }}>
-                Ein Blick, der <em className="text-rose not-italic">bleibt</em>.
+                Ein Blick, der <em className="text-accent-on-dark not-italic">bleibt</em>.
               </h1>
             </Reveal>
 

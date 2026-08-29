@@ -46,7 +46,7 @@ export function Navigation() {
             solid ? "text-ink" : "text-white"
           }`}
         >
-          Anita<span className={solid ? "text-orchid" : "text-rose"}> Brows</span> &amp; Lashes
+          Anita<span className="text-orchid"> Brows</span> &amp; Lashes
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

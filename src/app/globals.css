@@ -9,6 +9,9 @@
   --color-ink-soft: #3a3440;
   --color-orchid: #6b3f56;
   --color-orchid-hover: #572d43;
+  /* Aufgehellte Variante der Plum-/Aubergine-Buttonfarbe (--color-orchid)
+     für hervorgehobene Wörter auf schwarzem/sehr dunklem Hintergrund. */
+  --color-accent-on-dark: #c892a6;
   --color-border: #e7e1e6;
 
   --font-serif: var(--font-bodoni), "Bodoni Moda", Georgia, serif;
@@ -24,6 +27,7 @@
   --color-ink-soft: var(--color-ink-soft);
   --color-orchid: var(--color-orchid);
   --color-orchid-hover: var(--color-orchid-hover);
+  --color-accent-on-dark: var(--color-accent-on-dark);
   --color-border: var(--color-border);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);

@@ -21,7 +21,7 @@ export function Testimonials() {
           <Reveal className="max-w-2xl">
             <span className="eyebrow text-rose">Das sagen meine Kundinnen</span>
             <h2 className="mt-4 font-serif text-[1.9rem] leading-[1.15] tracking-[0.01em] text-white sm:text-4xl">
-              Vertrauen, das für sich <em className="text-rose not-italic">spricht</em>.
+              Vertrauen, das für sich <em className="text-accent-on-dark not-italic">spricht</em>.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               Über 330 verifizierte Bewertungen und zahlreiche zufriedene

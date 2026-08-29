@@ -7,7 +7,7 @@ export function Services() {
   return (
     <section id="leistungen" className="bg-white pb-24 pt-10 md:pb-32 md:pt-12 lg:pt-20">
       <div className="container-studio">
-        <div className="mb-16 grid grid-cols-1 gap-8 lg:mb-24 lg:grid-cols-12 lg:items-end lg:gap-16">
+        <div className="mb-10 grid grid-cols-1 gap-8 lg:mb-14 lg:grid-cols-12 lg:items-end lg:gap-16">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Meine Leistungen</span>
             <h2 className="mt-5 max-w-[16ch] font-serif text-[2.4rem] leading-[1.08] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
@@ -25,7 +25,7 @@ export function Services() {
           </Reveal>
         </div>
 
-        <div className="flex flex-col gap-16 md:gap-20 lg:gap-24">
+        <div className="flex flex-col gap-16 md:gap-16 lg:gap-20">
           {services.map((service, index) => {
             const reversed = index % 2 === 1;
             return (
@@ -37,13 +37,17 @@ export function Services() {
                   image
                   className={`md:col-span-6 ${reversed ? "md:order-2" : ""}`}
                 >
-                  <div className="group relative aspect-[4/5] w-full overflow-hidden bg-lilac/40">
+                  <div
+                    className={`group relative aspect-[4/5] w-full overflow-hidden bg-lilac/40 md:w-[clamp(496px,37vw,544px)] ${
+                      reversed ? "md:ml-auto" : ""
+                    }`}
+                  >
                     <Image
                       src={service.image}
                       alt={service.imageAlt}
                       fill
                       loading="lazy"
-                      sizes="(min-width: 768px) 48vw, 100vw"
+                      sizes="(min-width: 768px) min(37vw, 544px), 100vw"
                       style={{ objectPosition: service.imageFocus }}
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
