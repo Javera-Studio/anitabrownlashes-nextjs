@@ -207,9 +207,9 @@ Das Label ist aktiv und wird über die wiederverwendbare Komponente `src/compone
 Konkrete Optik (Stand zuletzt bestätigt):
 
 - **Positionierung:** immer unten links auf dem Bild – `className="bottom-3 left-3"` (Default der Komponente). Bei `PortraitQuote`/`PortraitQuoteReverse` liegt das Label in der inneren Aspect-Ratio-Box des Bildes, damit es auf dem Bild und nicht im einfarbigen Rand sitzt.
-- **Gesamttransparenz:** Wrapper-`<span>` hat `style={{ opacity: 0.9 }}` (gesamtes Label 10 % transparenter).
-- **Icon-Badge:** `h-5 w-5`, rund, `backdrop-blur-sm`, Text „AI" in `text-[8px] font-semibold text-white`; Inline-Style `backgroundColor: rgba(255,255,255,0.12)`, `border: 1px solid rgba(255,255,255,0.2)`, `opacity: 0.6`.
-- **Hover-/Fokus-Text:** „KI-generierte Bilddarstellung", fährt per `max-w`/`opacity` mit `duration-300` auf; Inline-Style `backgroundColor: rgba(255,255,255,0.13)`, `border: 1px solid rgba(255,255,255,0.2)`, `color: rgba(255,255,255,0.78)`, `rounded-md px-2 py-1 text-[10px]`.
+- **Gesamttransparenz:** Wrapper-`<span>` hat `style={{ opacity: 0.81 }}`; Wrapper-Gap `gap-1`.
+- **Icon-Badge:** `h-4 w-4`, rund, `backdrop-blur-sm`, Text „AI" in `text-[6.4px] font-semibold text-white`; Inline-Style `backgroundColor: rgba(255,255,255,0.12)`, `border: 1px solid rgba(255,255,255,0.2)`, `opacity: 0.6`.
+- **Hover-/Fokus-Text:** „KI-generierte Bilddarstellung", fährt per `max-w`/`opacity` mit `duration-300` auf; Inline-Style `backgroundColor: rgba(255,255,255,0.13)`, `border: 1px solid rgba(255,255,255,0.2)`, `color: rgba(255,255,255,0.78)`, `rounded px-1.5 py-0.5 text-[8px]`.
 - **Barrierefreiheit:** `tabIndex={0}`, `aria-label="KI-generierte Bilddarstellung"` am Wrapper, `focus-visible:ring-2 focus-visible:ring-white/60`; der Hover-Text erscheint auch bei Tastatur-Fokus (`group-focus/ai`).
 
 Optik-Änderungen ausschließlich zentral in `AiLabel.tsx`, nie pro Bild inline.
