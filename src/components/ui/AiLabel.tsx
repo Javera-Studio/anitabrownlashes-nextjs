@@ -3,7 +3,7 @@ export function AiLabel({ className = "bottom-3 left-3" }: { className?: string 
     <span
       tabIndex={0}
       aria-label="KI-generierte Bilddarstellung"
-      className={`group absolute z-10 inline-flex cursor-default items-center gap-1.5 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${className}`}
+      className={`group/ai absolute z-10 inline-flex cursor-default items-center gap-1.5 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-white/60 ${className}`}
     >
       <span
         aria-hidden
@@ -14,7 +14,7 @@ export function AiLabel({ className = "bottom-3 left-3" }: { className?: string 
       </span>
       <span
         aria-hidden
-        className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover:max-w-[200px] group-hover:opacity-100 group-focus:max-w-[200px] group-focus:opacity-100"
+        className="max-w-0 overflow-hidden whitespace-nowrap opacity-0 transition-all duration-300 ease-out group-hover/ai:max-w-[200px] group-hover/ai:opacity-100 group-focus/ai:max-w-[200px] group-focus/ai:opacity-100"
       >
         <span
           className="inline-block rounded-md px-2 py-1 text-[10px] font-normal leading-none"
