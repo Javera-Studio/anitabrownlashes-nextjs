@@ -53,7 +53,7 @@ export function Services() {
                 </div>
 
                 <Reveal delay={120} className={`md:col-span-6 ${reversed ? "md:order-1" : ""}`}>
-                  <h3 className="flex items-center gap-3 font-serif text-2xl leading-snug text-ink sm:gap-4 sm:text-3xl md:text-4xl">
+                  <h3 className="flex items-center gap-2.5 font-serif text-[1.4rem] leading-snug text-ink sm:gap-4 sm:text-3xl md:text-4xl">
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                     <span className="whitespace-nowrap text-center">{service.title}</span>
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
