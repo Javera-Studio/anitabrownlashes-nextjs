@@ -83,7 +83,7 @@ export function Hero() {
 
       <div className="bg-white pb-[26px] pt-0 md:pb-10 lg:pb-12">
         <div className="container-studio">
-          <ul className="relative z-20 -mt-7 grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-12 lg:-mt-16 lg:grid-cols-4 lg:gap-5">
+          <ul className="relative z-20 -mt-[1.575rem] grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-[2.7rem] lg:-mt-[3.6rem] lg:grid-cols-4 lg:gap-5">
             {trustItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 100}>
                 <li className="flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)]">
