@@ -15,7 +15,7 @@ export function About() {
                   alt="Anita Lakatos – Inhaberin von Anita Brows & Lashes in ihrem Studio"
                   fill
                   sizes="(min-width: 1024px) 42vw, 90vw"
-                  className="object-cover"
+                  className="object-cover object-[center_30%]"
                 />
               </div>
             </Reveal>
