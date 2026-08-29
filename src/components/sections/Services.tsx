@@ -34,7 +34,7 @@ export function Services() {
               >
                 <Reveal
                   image
-                  className={`md:col-span-7 ${reversed ? "md:order-2" : ""}`}
+                  className={`md:col-span-6 ${reversed ? "md:order-2" : ""}`}
                 >
                   <div className="group relative aspect-[4/5] w-full overflow-hidden bg-lilac/40">
                     <Image
@@ -42,7 +42,7 @@ export function Services() {
                       alt={service.imageAlt}
                       fill
                       loading="lazy"
-                      sizes="(min-width: 768px) 55vw, 100vw"
+                      sizes="(min-width: 768px) 48vw, 100vw"
                       style={{ objectPosition: service.imageFocus }}
                       className="object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.04]"
                     />
@@ -50,7 +50,7 @@ export function Services() {
                   </div>
                 </Reveal>
 
-                <Reveal delay={120} className={`md:col-span-5 ${reversed ? "md:order-1" : ""}`}>
+                <Reveal delay={120} className={`md:col-span-6 ${reversed ? "md:order-1" : ""}`}>
                   <span className="font-serif text-sm text-orchid tabular-nums">
                     0{index + 1}
                   </span>
