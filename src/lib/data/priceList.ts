@@ -6,7 +6,10 @@ export interface PriceRow {
 
 export interface PriceGroupData {
   title: string;
+  /** Kurze, kursive Zeile direkt unter dem Titel. */
   note?: string;
+  /** Ausführlicher Beschreibungstext unter der Notiz. */
+  description?: string;
   rows: PriceRow[];
 }
 
@@ -66,6 +69,9 @@ export const lashExtensionTechniques: PriceGroupData[] = [
 export const lashLiftingGroups: PriceGroupData[] = [
   {
     title: "Klassisches Wimpernlifting",
+    note: "Für einen natürlichen, eleganten Schwung.",
+    description:
+      "Die klassische Methode formt die Naturwimpern sanft nach oben und sorgt für einen schönen, offenen Blick. Pflegende Wirkstoffe wie Keratin, Proteine und Vitamine unterstützen die Wimpern während der Behandlung und verleihen ihnen ein geschmeidiges, gepflegtes Aussehen.",
     rows: [
       { treatment: "Ohne Färben", duration: "45 Min.", price: "69 €" },
       { treatment: "Mit Färben", duration: "1 Std.", price: "79 €" },
@@ -73,7 +79,9 @@ export const lashLiftingGroups: PriceGroupData[] = [
   },
   {
     title: "Koreanisches Wimpernlifting",
-    note: "Für extra Schwung – neue Technologie.",
+    note: "Sanfter Schwung, intensive Pflege.",
+    description:
+      "Beim Korean Lash Lifting sorgen besonders sanfte Produkte und eine spezielle Auftragetechnik für einen weichen, fließenden Schwung direkt vom Wimpernansatz. Keratin, Proteine, Aminosäuren und Vitamine unterstützen die Naturwimpern während der Behandlung und verleihen ihnen ein geschmeidiges, glänzendes und gepflegtes Aussehen.",
     rows: [
       { treatment: "Ohne Färben", duration: "40 Min.", price: "69 €" },
       { treatment: "Mit Färben", duration: "50 Min.", price: "79 €" },
