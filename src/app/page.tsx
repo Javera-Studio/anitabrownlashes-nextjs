@@ -21,10 +21,10 @@ export default function Home() {
       <About />
       <Statement />
       <Gallery />
+      <Instagram />
       <PortraitQuoteReverse />
       <StudioAmbience />
       <StudioGallery />
-      <Instagram />
       <Testimonials />
       <Faq />
       <Contact />
