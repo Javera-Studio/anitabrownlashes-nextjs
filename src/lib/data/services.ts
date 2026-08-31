@@ -1,8 +1,16 @@
+export interface ServiceMethod {
+  title: string;
+  tagline: string;
+  text: string;
+}
+
 export interface Service {
   slug: string;
   title: string;
-  short: string;
-  description: string;
+  short?: string;
+  description?: string;
+  /** Einzelne Methoden/Varianten der Leistung, falls die Behandlung mehrere Ansätze hat. */
+  methods?: ServiceMethod[];
   image: string;
   imageAlt: string;
   /** CSS object-position, tuned so the eye/brow area stays in frame when cropped. */
@@ -23,9 +31,18 @@ export const services: Service[] = [
   {
     slug: "lash-lifting",
     title: "Lash Lifting",
-    short: "Die natürliche Alternative zu Extensions.",
-    description:
-      "Die perfekte Alternative zu Extensions. Ihre Naturwimpern werden sanft angehoben, erhalten einen wunderschönen Schwung und wirken optisch länger und voller. Inklusive Färben mit hochwertigen InLei-Produkten.",
+    methods: [
+      {
+        title: "Klassisches Wimpernlifting",
+        tagline: "Für einen natürlichen, eleganten Schwung.",
+        text: "Die klassische Methode formt die Naturwimpern sanft nach oben und sorgt für einen schönen, offenen Blick. Pflegende Wirkstoffe wie Keratin, Proteine und Vitamine unterstützen die Wimpern während der Behandlung und verleihen ihnen ein geschmeidiges, gepflegtes Aussehen.",
+      },
+      {
+        title: "Koreanisches Wimpernlifting",
+        tagline: "Sanfter Schwung, intensive Pflege.",
+        text: "Beim Korean Lash Lifting sorgen besonders sanfte Produkte und eine spezielle Auftragetechnik für einen weichen, fließenden Schwung direkt vom Wimpernansatz. Keratin, Proteine, Aminosäuren und Vitamine unterstützen die Naturwimpern während der Behandlung und verleihen ihnen ein geschmeidiges, glänzendes und gepflegtes Aussehen.",
+      },
+    ],
     image: "/images/lashlisting.jpg",
     imageAlt: "Wimpern nach einem Lash Lifting",
     imageFocus: "center 32%",

@@ -58,10 +58,25 @@ export function Services() {
                     <span className="whitespace-nowrap text-center">{service.title}</span>
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                   </h3>
-                  <p className="mt-[5.25rem] text-sm font-medium text-orchid">{service.short}</p>
-                  <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
-                    {service.description}
-                  </p>
+                  {service.short && (
+                    <p className="mt-[5.25rem] text-sm font-medium text-orchid">{service.short}</p>
+                  )}
+                  {service.description && (
+                    <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
+                      {service.description}
+                    </p>
+                  )}
+                  {service.methods && (
+                    <div className="mt-[5.25rem] space-y-6">
+                      {service.methods.map((method) => (
+                        <div key={method.title} className="max-w-md">
+                          <h4 className="font-serif text-lg text-ink">{method.title}</h4>
+                          <p className="mt-1 text-sm font-medium text-orchid">{method.tagline}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-ink-soft">{method.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <a
                     href={`/preise#${service.slug}`}
                     className="mt-6 inline-flex items-center justify-center rounded-none border border-orchid bg-paper px-8 py-3 text-sm font-medium tracking-wide text-orchid transition-colors duration-300 hover:bg-orchid hover:text-white"

@@ -42,7 +42,10 @@ export function JsonLd() {
         itemOffered: {
           "@type": "Service",
           name: service.title,
-          description: service.description,
+          description:
+            service.description ??
+            service.methods?.map((method) => `${method.title}: ${method.text}`).join(" ") ??
+            "",
         },
       })),
     },
