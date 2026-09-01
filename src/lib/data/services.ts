@@ -21,9 +21,9 @@ export const services: Service[] = [
   {
     slug: "wimpernverlaengerung",
     title: "Wimpernverlängerung",
-    short: "Individuell abgestimmt. Natürlich schön.",
+    short: "Individuell abgestimmt auf Sie und Ihre Naturwimpern.",
     description:
-      "Länge, Stärke und Curl werden passend zu Ihren Naturwimpern, Ihrer Augenform und Ihrem gewünschten Look ausgewählt. Dabei liegt der Fokus auf einer sauberen, präzisen Arbeit und einem harmonischen Ergebnis – von natürlich und elegant bis ausdrucksstärker. Anschließend erhalten Sie persönliche Pflegetipps, damit Ihre Wimpern möglichst lange schön bleiben.",
+      "Bei der Wimpernverlängerung ist mir besonders wichtig, dass das Ergebnis natürlich wirkt und individuell zu Ihnen passt. Länge, Stärke und Curl wähle ich passend zu Ihren Naturwimpern, Ihrer Augenform und Ihrem gewünschten Look aus. Dabei achte ich auf eine saubere und präzise Arbeit, damit die Naturwimpern möglichst wenig belastet werden. Ob natürlich, elegant oder etwas ausdrucksstärker – am Ende sollen Sie sich mit Ihren Wimpern rundum wohlfühlen. Natürlich erhalten Sie von mir auch Tipps für die richtige Pflege zu Hause.",
     image: "/images/lashextention.jpg",
     imageAlt: "Detailaufnahme einer Wimpernverlängerung",
     imageFocus: "center 32%",
@@ -35,12 +35,12 @@ export const services: Service[] = [
       {
         title: "Klassisches Wimpernlifting",
         tagline: "Für einen natürlichen, eleganten Schwung.",
-        text: "Die klassische Methode formt die Naturwimpern sanft nach oben und sorgt für einen schönen, offenen Blick. Pflegende Wirkstoffe wie Keratin, Proteine und Vitamine unterstützen die Wimpern während der Behandlung und verleihen ihnen ein geschmeidiges, gepflegtes Aussehen.",
+        text: "Beim klassischen Wimpernlifting forme ich Ihre Naturwimpern sanft nach oben und verleihe ihnen einen schönen Schwung für einen offeneren Blick. Pflegende Wirkstoffe wie Keratin, Proteine und Vitamine unterstützen die Wimpern während der Behandlung und sorgen für ein geschmeidiges und gepflegtes Aussehen.",
       },
       {
         title: "Koreanisches Wimpernlifting",
-        tagline: "Sanfter Schwung, intensive Pflege.",
-        text: "Beim Korean Lash Lifting sorgen besonders sanfte Produkte und eine spezielle Auftragetechnik für einen weichen, fließenden Schwung direkt vom Wimpernansatz. Keratin, Proteine, Aminosäuren und Vitamine unterstützen die Naturwimpern während der Behandlung und verleihen ihnen ein geschmeidiges, glänzendes und gepflegtes Aussehen.",
+        tagline: "Sanfter Schwung und intensive Pflege.",
+        text: "Beim Korean Lash Lifting arbeite ich mit besonders sanften und pflegenden Produkten sowie einer speziellen Auftragetechnik. Dadurch entsteht ein weicher, fließender Schwung direkt vom Wimpernansatz – ohne einen zu starken oder geknickten Effekt. Keratin, Proteine, Aminosäuren und Vitamine unterstützen die Naturwimpern zusätzlich und verleihen ihnen ein geschmeidiges, glänzendes und gepflegtes Aussehen.",
       },
     ],
     image: "/images/lashlisting.jpg",
@@ -50,9 +50,9 @@ export const services: Service[] = [
   {
     slug: "brow-lifting",
     title: "Brow Lifting",
-    short: "Natürlich geformt. Harmonisch definiert.",
+    short: "Natürlich geformt und harmonisch definiert.",
     description:
-      "Beim Brow Lifting werden Ihre natürlichen Brauen individuell an Ihre Gesichtszüge angepasst, in die gewünschte Richtung gebracht und fixiert. Dadurch wirken sie voller und definierter, ohne ihre Natürlichkeit zu verlieren. Eine abschließende Pflege hält die Härchen geschmeidig, zusätzlich erhalten Sie Tipps für die richtige Pflege zu Hause.",
+      "Beim Brow Lifting ist mir besonders wichtig, Ihre natürlichen Augenbrauen schön in Form zu bringen, ohne dass sie unnatürlich wirken. Die Härchen werden in die gewünschte Richtung gebracht und fixiert, wodurch die Brauen voller und definierter erscheinen. Die Form passe ich individuell an Ihr Gesicht und Ihre natürlichen Brauen an. Abschließend erhalten die Härchen eine pflegende Behandlung, damit sie geschmeidig bleiben – und ich erkläre Ihnen, worauf Sie bei der Pflege zu Hause achten sollten.",
     image: "/images/browslifting.jpg",
     imageAlt: "Augenbrauen nach einem Brow Lifting",
     imageFocus: "center 30%",
