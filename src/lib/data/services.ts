@@ -21,9 +21,9 @@ export const services: Service[] = [
   {
     slug: "wimpernverlaengerung",
     title: "Wimpernverlängerung",
-    short: "Ausdrucksstark, individuell, langlebig.",
+    short: "Individuell abgestimmt. Natürlich schön.",
     description:
-      "Für einen dauerhaft ausdrucksstarken Blick – individuell angepasst von natürlich bis voluminös. Angeboten werden die Techniken 1:1, 2D, Light Volume und Mega Volume. Ich arbeite dabei mit moderner UV-Technik: Der Kleber härtet direkt während der Behandlung aus – die klassische 24-Stunden-Wartezeit entfällt, und Ihre Wimpern dürfen im Anschluss sofort mit Wasser in Kontakt kommen.",
+      "Länge, Stärke und Curl werden passend zu deinen Naturwimpern, deiner Augenform und deinem gewünschten Look ausgewählt. Dabei liegt der Fokus auf einer sauberen, präzisen Arbeit und einem harmonischen Ergebnis – von natürlich und elegant bis ausdrucksstärker. Anschließend erhältst du persönliche Pflegetipps, damit deine Wimpern möglichst lange schön bleiben.",
     image: "/images/lashextention.jpg",
     imageAlt: "Detailaufnahme einer Wimpernverlängerung",
     imageFocus: "center 32%",
@@ -50,9 +50,9 @@ export const services: Service[] = [
   {
     slug: "brow-lifting",
     title: "Brow Lifting",
-    short: "Perfekt geformt, ganz ohne Styling-Aufwand.",
+    short: "Natürlich geformt. Harmonisch definiert.",
     description:
-      "Perfekt geformte und voller wirkende Augenbrauen – ganz ohne tägliches Styling. Auf Wunsch inklusive Färben und individueller Anpassung für ein harmonisches Gesamtbild.",
+      "Beim Brow Lifting werden deine natürlichen Brauen individuell an deine Gesichtszüge angepasst, in die gewünschte Richtung gebracht und fixiert. Dadurch wirken sie voller und definierter, ohne ihre Natürlichkeit zu verlieren. Eine abschließende Pflege hält die Härchen geschmeidig, zusätzlich erhältst du Tipps für die richtige Pflege zu Hause.",
     image: "/images/browslifting.jpg",
     imageAlt: "Augenbrauen nach einem Brow Lifting",
     imageFocus: "center 30%",
