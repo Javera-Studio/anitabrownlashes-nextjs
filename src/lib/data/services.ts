@@ -23,7 +23,7 @@ export const services: Service[] = [
     title: "Wimpernverlängerung",
     short: "Individuell abgestimmt. Natürlich schön.",
     description:
-      "Länge, Stärke und Curl werden passend zu deinen Naturwimpern, deiner Augenform und deinem gewünschten Look ausgewählt. Dabei liegt der Fokus auf einer sauberen, präzisen Arbeit und einem harmonischen Ergebnis – von natürlich und elegant bis ausdrucksstärker. Anschließend erhältst du persönliche Pflegetipps, damit deine Wimpern möglichst lange schön bleiben.",
+      "Länge, Stärke und Curl werden passend zu Ihren Naturwimpern, Ihrer Augenform und Ihrem gewünschten Look ausgewählt. Dabei liegt der Fokus auf einer sauberen, präzisen Arbeit und einem harmonischen Ergebnis – von natürlich und elegant bis ausdrucksstärker. Anschließend erhalten Sie persönliche Pflegetipps, damit Ihre Wimpern möglichst lange schön bleiben.",
     image: "/images/lashextention.jpg",
     imageAlt: "Detailaufnahme einer Wimpernverlängerung",
     imageFocus: "center 32%",
@@ -52,7 +52,7 @@ export const services: Service[] = [
     title: "Brow Lifting",
     short: "Natürlich geformt. Harmonisch definiert.",
     description:
-      "Beim Brow Lifting werden deine natürlichen Brauen individuell an deine Gesichtszüge angepasst, in die gewünschte Richtung gebracht und fixiert. Dadurch wirken sie voller und definierter, ohne ihre Natürlichkeit zu verlieren. Eine abschließende Pflege hält die Härchen geschmeidig, zusätzlich erhältst du Tipps für die richtige Pflege zu Hause.",
+      "Beim Brow Lifting werden Ihre natürlichen Brauen individuell an Ihre Gesichtszüge angepasst, in die gewünschte Richtung gebracht und fixiert. Dadurch wirken sie voller und definierter, ohne ihre Natürlichkeit zu verlieren. Eine abschließende Pflege hält die Härchen geschmeidig, zusätzlich erhalten Sie Tipps für die richtige Pflege zu Hause.",
     image: "/images/browslifting.jpg",
     imageAlt: "Augenbrauen nach einem Brow Lifting",
     imageFocus: "center 30%",
