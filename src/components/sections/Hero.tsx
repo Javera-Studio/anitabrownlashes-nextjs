@@ -12,31 +12,47 @@ const trustItems = [
 export function Hero() {
   return (
     <section id="top" className="relative">
-      <div className="relative flex h-[100svh] min-h-[680px] w-full flex-col overflow-hidden bg-ink">
-        <Image
-          src="/images/heromain.jpg"
-          alt="Drei lächelnde Frauen mit gepflegten Wimpern und Augenbrauen"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <AiLabel />
+      <div className="relative flex h-[100svh] min-h-[680px] w-full flex-col overflow-hidden bg-ink max-sm:min-h-[850px]">
+        {/*
+          Bild-Wrapper: Desktop/Tablet unverändert (absolute inset-0 = full-bleed
+          Hintergrund wie bisher). Mobile bekommt eine eigene, deutlich kürzere
+          Bildhöhe (max-sm:h-[320px], normaler Flow statt absolute) – dadurch
+          zeigt object-cover die volle Bildhöhe und deutlich mehr Bildbreite, statt
+          fast nur die mittlere Frau. Kein neuer Bild-Crop nötig, da bei dieser
+          Boxhöhe bereits die komplette Bildhöhe sichtbar bleibt (nur die Ränder
+          links/rechts werden noch leicht beschnitten).
+        */}
+        <div className="absolute inset-0 max-sm:relative max-sm:inset-auto max-sm:h-[320px] max-sm:w-full max-sm:shrink-0 max-sm:overflow-hidden">
+          <Image
+            src="/images/heromain.jpg"
+            alt="Drei lächelnde Frauen mit gepflegten Wimpern und Augenbrauen"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <AiLabel />
+        </div>
 
-        {/* Vertical overlay: transparent/light on top and middle, warm dark only in the lower third */}
+        {/* Vertical overlay: transparent/light on top and middle, warm dark only in the lower third.
+            Nur Desktop/Tablet – auf Mobile liegt der Text nicht mehr auf dem Bild, sondern in einem
+            eigenen, blickdichten Textblock darunter (siehe unten). */}
         <div
-          className="pointer-events-none absolute inset-0"
+          className="pointer-events-none absolute inset-0 max-sm:hidden"
           style={{
             background:
               "linear-gradient(to bottom, rgba(20,12,8,0) 0%, rgba(20,12,8,0) 46%, rgba(36,20,14,0.32) 64%, rgba(26,15,11,0.72) 82%, rgba(22,13,10,0.85) 100%)",
           }}
         />
 
-        {/* Spacer keeps the top ~60% of the hero (faces, hair) completely clear */}
-        <div className="basis-[54%] shrink-0 sm:basis-[57%] lg:basis-[60%]" aria-hidden />
+        {/* Spacer keeps the top ~60% of the hero (faces, hair) completely clear.
+            Nur Desktop/Tablet – auf Mobile übernimmt die eigene Bildhöhe oben diese Funktion. */}
+        <div className="basis-[54%] shrink-0 sm:basis-[57%] lg:basis-[60%] max-sm:hidden" aria-hidden />
 
-        <div className="relative z-10 flex flex-1 justify-center px-6">
-          <div className="-mt-[1cm] w-full max-w-[820px] text-center text-white">
+        {/* Textblock: Desktop/Tablet unverändert (transparent, liegt auf dem Bild).
+            Mobile: eigener blickdichter Ink-Block unterhalb des Bildes, mehr Abstand nach oben/unten. */}
+        <div className="relative z-10 flex flex-1 justify-center px-6 max-sm:bg-ink max-sm:pt-14 max-sm:pb-10">
+          <div className="-mt-[1cm] w-full max-w-[820px] text-center text-white max-sm:mt-0">
             <Reveal duration={1400}>
               <span className="inline-flex items-center gap-3 text-xs">
                 <span className="h-px w-8 bg-white/70" />
@@ -62,7 +78,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={920} duration={1400}>
-              <div className="mt-6 flex items-center justify-center gap-2.5">
+              <div className="mt-6 flex items-center justify-center gap-2.5 max-sm:mt-9">
                 <div className="flex gap-0.5 text-rose">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <svg key={i} viewBox="0 0 20 20" className="h-3.5 w-3.5 fill-current">

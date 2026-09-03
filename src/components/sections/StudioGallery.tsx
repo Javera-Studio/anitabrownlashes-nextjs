@@ -10,8 +10,9 @@ import { studioGalleryImages } from "@/lib/data/studioGallery";
  * Editorial-Collage: geschlossenes CSS-Grid ohne Lücken.
  * Desktop (sm+): 6-Spalten-Grid, fünf handgesetzte 6×3-Bänder – jedes Band füllt
  * seine drei Zeilen vollständig, dadurch saubere obere/untere Kante.
- * Mobile: 2-Spalten-Grid, Muster [row-span 2 / 3 / 1] je Dreiergruppe – ebenfalls
- * lückenlos und mit unterschiedlichen Bildhöhen.
+ * Mobile: 2-Spalten-Grid, Row-Span je Bild anhand der Ausrichtung bestimmt
+ * (siehe mobileRowSpans unten) – lückenlos und mit unterschiedlichen Bildhöhen,
+ * ohne dass object-cover Quer- oder Hochformat-Fotos stark beschneidet.
  * Reihenfolge/Anzahl der Bilder muss zu studioGalleryImages passen.
  */
 const layout = [
@@ -32,7 +33,24 @@ const layout = [
   "sm:col-span-3 sm:row-span-3",
 ];
 
-const mobileRowSpan = ["row-span-2", "row-span-3", "row-span-1"];
+/**
+ * Mobile Row-Span je Bild – orientierungsbasiert statt einem starren i%3-Zyklus:
+ * Querformat-Fotos (Breite > Höhe) passen in die flache row-span-1-Zelle, sonst
+ * würde ihre Breite in einer hohen, schmalen Zelle massiv beschnitten (object-cover
+ * hätte dann nur noch einen schmalen Mittelstreifen gezeigt). Hochformat-Fotos
+ * wechseln sich zwischen row-span-3/row-span-2 ab (behält die oben beschriebene
+ * Höhenvarianz der Collage bei), da eine row-span-1-Zelle ihre Höhe zu stark
+ * beschneiden würde.
+ */
+const mobileRowSpans: string[] = (() => {
+  let portraitCount = 0;
+  return studioGalleryImages.map((img) => {
+    if (img.width > img.height) return "row-span-1";
+    const span = portraitCount % 2 === 0 ? "row-span-3" : "row-span-2";
+    portraitCount += 1;
+    return span;
+  });
+})();
 
 export function StudioGallery() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -65,7 +83,7 @@ export function StudioGallery() {
                 key={img.src}
                 image
                 delay={(i % 3) * 80}
-                className={`relative overflow-hidden col-span-1 ${mobileRowSpan[i % 3]} ${layout[i] ?? ""}`}
+                className={`relative overflow-hidden col-span-1 ${mobileRowSpans[i]} ${layout[i] ?? ""}`}
               >
                 <button
                   type="button"
