@@ -12,7 +12,7 @@ export function PriceHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover max-sm:[object-position:64%_center]"
         />
         <AiLabel />
         <div className="pointer-events-none absolute inset-0 bg-ink/50" />
