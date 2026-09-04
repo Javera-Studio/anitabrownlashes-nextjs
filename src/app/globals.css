@@ -221,6 +221,64 @@ body {
   }
 }
 
+/* Section-Slide-Reveal: NUR für die beiden grossen Portrait-Zitat-Sections.
+   Die komplette Section (Hintergrund, Bild, Zitat, Linien) bewegt sich als
+   ein Block seitlich in die finale Position. */
+[data-reveal].section-slide-left {
+  opacity: 0.75;
+  transform: translateX(-9vw);
+  transition-duration: 1100ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].section-slide-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+[data-reveal].section-slide-right {
+  opacity: 0.75;
+  transform: translateX(9vw);
+  transition-duration: 1100ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].section-slide-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 639.98px) {
+  [data-reveal].section-slide-left {
+    transform: translateX(-30px);
+    transition-duration: 820ms;
+  }
+
+  [data-reveal].section-slide-right {
+    transform: translateX(30px);
+    transition-duration: 820ms;
+  }
+}
+
+/* Preiszeilen (/preise): jede Zeile schiebt sich einzeln, dezent von
+   links ein, waehrend Tabellenbreite und Spalten unveraendert bleiben. */
+[data-reveal].price-row-reveal {
+  transform: translateX(-30px);
+  transition-duration: 580ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].price-row-reveal.is-visible {
+  transform: translateX(0);
+}
+
+@media (max-width: 639.98px) {
+  [data-reveal].price-row-reveal {
+    transform: translateX(-18px);
+    transition-duration: 480ms;
+  }
+}
+
 #leistungen,
 #ueber-anita,
 #ergebnisse,
@@ -295,6 +353,23 @@ body {
 
   .price-row .price-price {
     min-width: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .price-row-head,
+  .price-row {
+    column-gap: 2.25rem;
+  }
+
+  .price-row-head .price-duration,
+  .price-row .price-duration {
+    min-width: 9rem;
+  }
+
+  .price-row-head .price-price,
+  .price-row .price-price {
+    min-width: 6rem;
   }
 }
 

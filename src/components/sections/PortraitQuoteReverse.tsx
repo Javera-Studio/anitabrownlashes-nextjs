@@ -6,11 +6,8 @@ import { AnimatedQuote } from "@/components/ui/AnimatedQuote";
 export function PortraitQuoteReverse() {
   return (
     <section className="w-full overflow-hidden">
-      <div className="flex flex-col md:h-[640px] md:flex-row lg:h-[680px]">
-        <Reveal
-          delay={180}
-          className="order-2 flex w-full items-center justify-center bg-orchid px-8 py-12 sm:py-16 md:order-none md:h-full md:w-[42%] md:px-12 md:py-0 lg:w-[40%] lg:px-16"
-        >
+      <Reveal className="section-slide-left flex flex-col md:h-[640px] md:flex-row lg:h-[680px]">
+        <div className="order-2 flex w-full items-center justify-center bg-orchid px-8 py-12 sm:py-16 md:order-none md:h-full md:w-[42%] md:px-12 md:py-0 lg:w-[40%] lg:px-16">
           <blockquote className="mx-auto max-w-[420px] text-center">
             <span aria-hidden className="mx-auto mb-5 block h-px w-10 bg-white/40" />
             <AnimatedQuote
@@ -22,13 +19,12 @@ export function PortraitQuoteReverse() {
                 { text: "spürt man.“" },
               ]}
               emphasisClassName="not-italic"
+              startDelayMs={280}
             />
           </blockquote>
-        </Reveal>
+        </div>
 
-        <Reveal
-          className="relative order-1 w-full bg-lilac/50 md:order-none md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]"
-        >
+        <div className="relative order-1 w-full bg-lilac/50 md:order-none md:flex md:h-full md:w-[58%] md:items-center md:justify-center lg:w-[60%]">
           <div className="relative aspect-[2/1] w-full max-h-full">
             <Image
               src="/images/hero3.jpg"
@@ -37,10 +33,10 @@ export function PortraitQuoteReverse() {
               sizes="(min-width: 768px) 60vw, 100vw"
               className="object-cover"
             />
-            <AiLabel className="bottom-3 left-3" />
+            <AiLabel className="bottom-2 left-2" />
           </div>
-        </Reveal>
-      </div>
+        </div>
+      </Reveal>
     </section>
   );
 }

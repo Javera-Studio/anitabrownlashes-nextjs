@@ -12,8 +12,8 @@ export function PriceRows({ rows }: { rows: PriceRow[] }) {
       {rows.map((row, i) => (
         <Reveal
           key={row.treatment}
-          delay={(i % 6) * 60}
-          className="price-row border-b border-border py-3.5 last:border-b-0"
+          delay={(i % 10) * 85}
+          className="price-row-reveal price-row border-b border-border py-3.5 last:border-b-0"
         >
           <span className="price-treatment text-[0.95rem] leading-snug text-ink sm:text-base">
             {row.treatment}

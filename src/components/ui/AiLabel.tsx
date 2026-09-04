@@ -1,4 +1,4 @@
-export function AiLabel({ className = "bottom-3 left-3" }: { className?: string }) {
+export function AiLabel({ className = "bottom-2 left-2" }: { className?: string }) {
   return (
     <span
       tabIndex={0}

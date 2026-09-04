@@ -13,6 +13,9 @@ interface AnimatedQuoteProps {
   /** Klassen für hervorgehobene Wörter, z. B. "text-orchid not-italic". */
   emphasisClassName?: string;
   className?: string;
+  /** Verzögert den Start des Letter-Reveals, z. B. damit er kurz nach einer
+   * umgebenden Section-Einflug-Animation einsetzt. */
+  startDelayMs?: number;
 }
 
 /** ms Verzögerung zwischen zwei Buchstaben; die Mobile-Geschwindigkeit wird
@@ -58,18 +61,25 @@ function tokenizeParts(parts: QuotePart[]): WordToken[] {
  * Zeilen-Wrapping unangetastet bleibt. Für Screenreader steht der volle Text
  * zusätzlich als einfacher, nicht zerlegter Textknoten bereit.
  */
-export function AnimatedQuote({ parts, emphasisClassName = "", className = "" }: AnimatedQuoteProps) {
+export function AnimatedQuote({
+  parts,
+  emphasisClassName = "",
+  className = "",
+  startDelayMs = 0,
+}: AnimatedQuoteProps) {
   const ref = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
 
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            node.classList.add("is-visible");
+            timeoutId = setTimeout(() => node.classList.add("is-visible"), startDelayMs);
             observer.unobserve(entry.target);
           }
         });
@@ -78,8 +88,11 @@ export function AnimatedQuote({ parts, emphasisClassName = "", className = "" }:
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [startDelayMs]);
 
   const fullText = parts.map((part) => part.text).join(" ");
   const wordTokens = tokenizeParts(parts);
