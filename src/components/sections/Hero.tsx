@@ -140,7 +140,7 @@ export function Hero() {
                 delay={i * 100}
                 className="usp-card-reveal max-sm:mx-auto max-sm:w-[85vw] max-sm:max-w-[360px]"
               >
-                <li className="flex h-full flex-col border border-border bg-white px-6 py-7">
+                <li className="flex h-full flex-col border border-border bg-white px-6 pt-6 pb-3">
                   <span className="font-serif text-[0.7rem] tracking-[0.2em] text-orchid">
                     {String(i + 1).padStart(2, "0")}
                   </span>

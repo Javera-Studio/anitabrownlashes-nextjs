@@ -47,10 +47,26 @@ export function InstagramPhone() {
         .phone-mockup.is-settled {
           transform: rotate(0deg) translateY(0);
           opacity: 1;
+          animation: phone-sway 9s ease-in-out 900ms infinite;
+        }
+        @keyframes phone-sway {
+          0%, 100% { transform: rotate(0deg) translateY(0); }
+          25% { transform: rotate(1.4deg) translateY(0); }
+          50% { transform: rotate(0deg) translateY(0); }
+          75% { transform: rotate(-1.4deg) translateY(0); }
         }
         @media (max-width: 639.98px) {
           .phone-mockup {
             transform: rotate(-2deg) translateY(16px);
+          }
+          .phone-mockup.is-settled {
+            animation-name: phone-sway-mobile;
+          }
+          @keyframes phone-sway-mobile {
+            0%, 100% { transform: rotate(0deg) translateY(0); }
+            25% { transform: rotate(1deg) translateY(0); }
+            50% { transform: rotate(0deg) translateY(0); }
+            75% { transform: rotate(-1deg) translateY(0); }
           }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -58,6 +74,7 @@ export function InstagramPhone() {
             transform: none !important;
             opacity: 1 !important;
             transition: none !important;
+            animation: none !important;
           }
         }
       `}</style>
