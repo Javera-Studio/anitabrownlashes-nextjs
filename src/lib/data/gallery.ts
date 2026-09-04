@@ -25,6 +25,8 @@ export const resultImages: GalleryImage[] = [
   { src: "/images/33.jpeg", alt: "Ergebnis einer Brow- und Lash-Behandlung" },
   { src: "/images/44.jpeg", alt: "Ergebnis einer Wimpernverlängerung" },
   { src: "/images/55.jpeg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
+  { src: "/images/66.jpeg", alt: "Ergebnis einer Wimpernverlängerung" },
+  { src: "/images/77.jpeg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
   { src: "/images/wimperverl7.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
   { src: "/images/wimperverl5.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
   { src: "/images/wimperverl9.jpg", alt: "Ergebnis einer Wimpernverlängerung, Nahaufnahme" },
