@@ -140,19 +140,16 @@ body {
   }
 }
 
-/* USP-Karten (Startseite, Hero): eigener, etwas weicherer/hochwertigerer
-   Scroll-Einfahr-Effekt, nur auf Mobile aktiv – Desktop/Tablet nutzen
-   weiterhin den Standard-Reveal oben unverändert. */
-@media (max-width: 639.98px) {
-  [data-reveal].usp-card-reveal {
-    transform: translateY(64px);
-    transition-duration: 620ms;
-    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  }
+/* USP-Karten (Startseite, Hero): dezentes, einheitliches Fade-up für
+   Mobile UND Desktop – ruhiger als der Standard-Reveal-Versatz. */
+[data-reveal].usp-card-reveal {
+  transform: translateY(20px);
+  transition-duration: 620ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
 
-  [data-reveal].usp-card-reveal.is-visible {
-    transform: translateY(0);
-  }
+[data-reveal].usp-card-reveal.is-visible {
+  transform: translateY(0);
 }
 
 /* Preis-Kategorie-Karten (/preise, Hero): sehr dezentes Fade-up, nur auf
@@ -165,6 +162,62 @@ body {
 
   [data-reveal].price-card-reveal.is-visible {
     transform: translateY(0);
+  }
+}
+
+/* Instagram-CTA: dezente Pfeilbewegung, nur auf Geräten mit echtem Hover
+   (kein Touch-Tap-Verhalten). */
+.insta-cta-arrow {
+  transition: transform 300ms ease;
+}
+
+@media (hover: hover) {
+  .insta-cta:hover .insta-cta-arrow {
+    transform: translateX(5px);
+  }
+}
+
+/* Grosse Editorial-Zitate (Bild-/Statement-Sections): Buchstaben werden
+   weich "aufgedeckt", nicht getippt – opacity + Versatz + leichter Blur,
+   von links nach rechts gestaffelt. Wort-Wrapper bleiben ganz, damit das
+   Zeilen-Umbrechen normal am Leerzeichen passiert. */
+.letter-reveal-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letter-reveal-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(3.5px);
+  transition:
+    opacity 460ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 460ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.letter-reveal.is-visible .letter-reveal-char {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (max-width: 639.98px) {
+  .letter-reveal-char {
+    transform: translateY(6px);
+    filter: blur(2.5px);
+    transition-duration: 380ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .letter-reveal-char {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    transition-delay: 0ms !important;
   }
 }
 

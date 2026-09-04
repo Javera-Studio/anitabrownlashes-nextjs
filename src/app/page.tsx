@@ -11,6 +11,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Instagram } from "@/components/sections/Instagram";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
+import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Testimonials />
       <Faq />
       <Contact />
+      <FinalCta />
     </>
   );
 }

@@ -28,7 +28,7 @@ export function Instagram() {
                 href={business.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex h-12 items-center gap-3 border border-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-orchid transition-colors hover:bg-orchid hover:text-white"
+                className="insta-cta mt-8 inline-flex h-12 items-center gap-3 border border-orchid px-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-orchid transition-colors hover:bg-orchid hover:text-white"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.6">
                   <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -36,6 +36,16 @@ export function Instagram() {
                   <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
                 </svg>
                 {business.instagramHandle}
+                <svg
+                  viewBox="0 0 16 16"
+                  className="insta-cta-arrow h-3 w-3"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  aria-hidden
+                >
+                  <path d="M2 8h11M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </a>
             </Reveal>
           </div>

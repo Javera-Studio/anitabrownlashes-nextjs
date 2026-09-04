@@ -40,17 +40,22 @@ export function InstagramPhone() {
 
       <style>{`
         .phone-mockup {
-          transform: rotate(-6deg) translateY(24px);
+          transform: rotate(-3deg) translateY(22px);
           opacity: 0;
           transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1), opacity 700ms ease-out;
         }
         .phone-mockup.is-settled {
-          transform: rotate(-3deg) translateY(0);
+          transform: rotate(0deg) translateY(0);
           opacity: 1;
+        }
+        @media (max-width: 639.98px) {
+          .phone-mockup {
+            transform: rotate(-2deg) translateY(16px);
+          }
         }
         @media (prefers-reduced-motion: reduce) {
           .phone-mockup {
-            transform: rotate(-3deg) translateY(0) !important;
+            transform: none !important;
             opacity: 1 !important;
             transition: none !important;
           }

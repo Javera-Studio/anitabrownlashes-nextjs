@@ -12,6 +12,10 @@ export interface StudioGalleryImage {
  * Die Reihenfolge ist bewusst auf die Editorial-Collage in StudioGallery.tsx
  * abgestimmt (fünf lückenlose 6×3-Bänder). Wird die Liste geändert, muss das
  * `layout`-Array in StudioGallery.tsx entsprechend angepasst werden.
+ *
+ * Zusätzlich folgt die Reihenfolge – so weit es die feste Bildform je Slot
+ * zulässt – bewusst einer kleinen Geschichte: zuerst Studio/Atmosphäre,
+ * dann Anita bei der Arbeit, dann nahe Behandlungs-/Detailaufnahmen.
  */
 export const studioGalleryImages: StudioGalleryImage[] = [
   {
@@ -22,11 +26,11 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 40%",
   },
   {
-    src: "/images/galerie4.jpg",
-    alt: "Wimpernverlängerung mit UV-Technik – einzelne Wimpern werden mit der Pinzette unter UV-Licht angesetzt",
+    src: "/images/galerie1.jpg",
+    alt: "Reinigung der Arbeitsinstrumente im Ultraschallgerät im Studio",
     width: 1080,
     height: 1920,
-    focus: "center 40%",
+    focus: "center 55%",
   },
   {
     src: "/images/galerie3.jpg",
@@ -36,18 +40,11 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 22%",
   },
   {
-    src: "/images/galerie9.jpg",
-    alt: "Nahaufnahme einer Wimpernbehandlung mit Bürstchen und Unterlidpads",
+    src: "/images/galerie11.jpg",
+    alt: "Anita im Studio vor dem runden Spiegel mit dem Zitat an der Wand",
     width: 1920,
     height: 1080,
-    focus: "center 38%",
-  },
-  {
-    src: "/images/galerie8.jpg",
-    alt: "Nahaufnahme von Auge und Augenbraue nach der Behandlung",
-    width: 1920,
-    height: 1080,
-    focus: "center 42%",
+    focus: "center 30%",
   },
   {
     src: "/images/galerie12.jpg",
@@ -57,18 +54,25 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 45%",
   },
   {
-    src: "/images/galerie2.jpg",
-    alt: "Hand mit Wimpern-Pads und Produkten während der Behandlungsvorbereitung",
-    width: 1080,
-    height: 1920,
-    focus: "center 32%",
-  },
-  {
-    src: "/images/galerie11.jpg",
-    alt: "Anita im Studio vor dem runden Spiegel mit dem Zitat an der Wand",
+    src: "/images/galerie8.jpg",
+    alt: "Nahaufnahme von Auge und Augenbraue nach der Behandlung",
     width: 1920,
     height: 1080,
-    focus: "center 30%",
+    focus: "center 42%",
+  },
+  {
+    src: "/images/galerie5.jpg",
+    alt: "Anita bei der Behandlung einer Kundin unter dem Ringlicht, InLei-Produkte im Vordergrund",
+    width: 1080,
+    height: 1920,
+    focus: "center 18%",
+  },
+  {
+    src: "/images/galerie9.jpg",
+    alt: "Nahaufnahme einer Wimpernbehandlung mit Bürstchen und Unterlidpads",
+    width: 1920,
+    height: 1080,
+    focus: "center 38%",
   },
   {
     src: "/images/galerie10.jpg",
@@ -85,13 +89,6 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 42%",
   },
   {
-    src: "/images/galerie5.jpg",
-    alt: "Anita bei der Behandlung einer Kundin unter dem Ringlicht, InLei-Produkte im Vordergrund",
-    width: 1080,
-    height: 1920,
-    focus: "center 18%",
-  },
-  {
     src: "/images/galerie7.jpg",
     alt: "Porträt von Anita mit Wimpern-Pinzette vor der Studiowand mit Zitat",
     width: 1080,
@@ -99,11 +96,18 @@ export const studioGalleryImages: StudioGalleryImage[] = [
     focus: "center 16%",
   },
   {
-    src: "/images/galerie1.jpg",
-    alt: "Reinigung der Arbeitsinstrumente im Ultraschallgerät im Studio",
+    src: "/images/galerie4.jpg",
+    alt: "Wimpernverlängerung mit UV-Technik – einzelne Wimpern werden mit der Pinzette unter UV-Licht angesetzt",
     width: 1080,
     height: 1920,
-    focus: "center 55%",
+    focus: "center 40%",
+  },
+  {
+    src: "/images/galerie2.jpg",
+    alt: "Hand mit Wimpern-Pads und Produkten während der Behandlungsvorbereitung",
+    width: 1080,
+    height: 1920,
+    focus: "center 32%",
   },
   {
     src: "/images/galerie6.jpg",

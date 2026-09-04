@@ -5,7 +5,7 @@ import { AiLabel } from "@/components/ui/AiLabel";
 
 export function Services() {
   return (
-    <section id="leistungen" className="bg-white pb-24 pt-10 md:pb-32 md:pt-12 lg:pt-20">
+    <section id="leistungen" className="bg-white pb-24 pt-8 md:pb-32 md:pt-10 lg:pt-14">
       <div className="container-studio">
         <div className="mb-10 grid grid-cols-1 gap-8 lg:mb-14 lg:grid-cols-12 lg:items-end lg:gap-16">
           <Reveal className="lg:col-span-7">
@@ -59,7 +59,13 @@ export function Services() {
                     <span aria-hidden className="h-px flex-1 bg-orchid/50" />
                   </h3>
                   {service.short && (
-                    <p className="mt-[5.25rem] text-sm font-medium text-orchid">{service.short}</p>
+                    <p
+                      className={`mt-[5.25rem] text-sm font-medium text-orchid ${
+                        service.slug === "wimpernverlaengerung" ? "md:mt-[2.5rem]" : ""
+                      }`}
+                    >
+                      {service.short}
+                    </p>
                   )}
                   {service.description && (
                     <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
@@ -68,8 +74,11 @@ export function Services() {
                   )}
                   {service.methods && (
                     <div className="mt-[5.25rem] space-y-6">
-                      {service.methods.map((method) => (
-                        <div key={method.title} className="max-w-md">
+                      {service.methods.map((method, mi) => (
+                        <div
+                          key={method.title}
+                          className={`max-w-md ${mi > 0 ? "border-t border-border pt-6" : ""}`}
+                        >
                           <h4 className="font-serif text-lg text-ink">{method.title}</h4>
                           <p className="mt-1 text-sm font-medium text-orchid">{method.tagline}</p>
                           <p className="mt-2 text-sm leading-relaxed text-ink-soft">{method.text}</p>

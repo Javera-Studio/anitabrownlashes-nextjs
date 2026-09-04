@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { AiLabel } from "@/components/ui/AiLabel";
+import { AnimatedQuote } from "@/components/ui/AnimatedQuote";
 
 export function PortraitQuote() {
   return (
@@ -21,17 +22,19 @@ export function PortraitQuote() {
 
         <Reveal
           delay={180}
-          className="flex w-full items-center justify-center bg-rose px-8 py-10 sm:py-14 md:h-full md:w-[42%] md:px-12 md:py-0 lg:w-[40%] lg:px-16"
+          className="flex w-full items-center justify-center bg-rose px-8 py-12 sm:py-16 md:h-full md:w-[42%] md:px-12 md:py-0 lg:w-[40%] lg:px-16"
         >
-          <blockquote className="mx-auto max-w-[460px] text-center">
-            <span aria-hidden className="mx-auto mb-4 block h-px w-10 bg-orchid/50" />
-            <p
-              className="font-serif leading-[1.35] tracking-[0.01em] text-ink"
-              style={{ fontSize: "clamp(2.5rem, 3.2vw, 4rem)" }}
-            >
-              „Schönheit soll dich nicht verändern – sondern deinen{" "}
-              <em className="text-orchid not-italic">Ausdruck</em> unterstreichen.“
-            </p>
+          <blockquote className="mx-auto max-w-[420px] text-center">
+            <span aria-hidden className="mx-auto mb-5 block h-px w-10 bg-orchid/50" />
+            <AnimatedQuote
+              className="font-serif text-[clamp(2.2rem,2.8vw,3.5rem)] leading-[1.5] tracking-[0.01em] text-ink"
+              parts={[
+                { text: "„Schönheit soll dich nicht verändern – sondern deinen" },
+                { text: "Ausdruck", emphasis: true },
+                { text: "unterstreichen.“" },
+              ]}
+              emphasisClassName="text-orchid not-italic"
+            />
           </blockquote>
         </Reveal>
       </div>

@@ -131,7 +131,7 @@ export function Hero() {
         <div className="h-8 shrink-0 sm:h-10 lg:h-14 max-sm:h-6" aria-hidden />
       </div>
 
-      <div className="bg-white pb-[26px] pt-0 md:pb-10 lg:pb-12">
+      <div className="bg-white pb-6 pt-0 md:pb-8 lg:pb-12">
         <div className="container-studio">
           <ul className="relative z-20 -mt-[1.575rem] grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-[2.7rem] lg:-mt-[3.6rem] lg:grid-cols-4 lg:gap-5 max-sm:-mt-8 max-sm:grid-cols-1 max-sm:gap-4">
             {trustItems.map((item, i) => (
@@ -140,11 +140,13 @@ export function Hero() {
                 delay={i * 100}
                 className="usp-card-reveal max-sm:mx-auto max-sm:w-[85vw] max-sm:max-w-[360px]"
               >
-                <li className="flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] max-sm:min-h-[100px] max-sm:px-5 max-sm:py-3.5">
-                  <p className="text-sm font-semibold tracking-wide text-ink max-sm:text-[0.82rem]">{item.title}</p>
-                  <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft max-sm:mt-1 max-sm:text-[0.76rem] max-sm:leading-snug">
-                    {item.text}
-                  </p>
+                <li className="flex h-full flex-col border border-border bg-white px-6 py-7">
+                  <span className="font-serif text-[0.7rem] tracking-[0.2em] text-orchid">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span aria-hidden className="mt-2 block h-px w-8 bg-orchid/40" />
+                  <p className="mt-4 font-serif text-[1.05rem] leading-snug text-ink">{item.title}</p>
+                  <p className="mt-2 text-[0.8rem] leading-relaxed text-ink-soft">{item.text}</p>
                 </li>
               </Reveal>
             ))}
