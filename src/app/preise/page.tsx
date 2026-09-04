@@ -47,7 +47,7 @@ export default function PreisePage() {
 
       {/* 1. Wimpernverlängerung */}
       <section id="wimpernverlaengerung" className="bg-white py-16 md:py-20">
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="max-w-xl">
             <Reveal>
               <span className="eyebrow">Wimpernverlängerung</span>
@@ -71,7 +71,7 @@ export default function PreisePage() {
 
         <PriceGallery images={wimpernGalleryImages} />
 
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="mt-10 max-w-xl">
             <BookingButton label="Termin buchen" />
           </div>
@@ -80,7 +80,7 @@ export default function PreisePage() {
 
       {/* 2. Lash Lifting */}
       <section id="lash-lifting" className="bg-lilac/30 py-16 md:py-20">
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="max-w-xl">
             <Reveal>
               <span className="eyebrow">Lash Lifting</span>
@@ -99,7 +99,7 @@ export default function PreisePage() {
 
         <PriceGallery images={lashliftGalleryImages} />
 
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="mt-10 max-w-xl">
             <BookingButton label="Termin buchen" />
           </div>
@@ -108,7 +108,7 @@ export default function PreisePage() {
 
       {/* 3. Brow Lifting & Augenbrauen */}
       <section id="brow-lifting" className="bg-white py-16 md:py-20">
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="max-w-xl">
             <Reveal>
               <span className="eyebrow">Brow Lifting</span>
@@ -127,7 +127,7 @@ export default function PreisePage() {
 
         <PriceGallery images={browliftGalleryImages} />
 
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="mt-10 max-w-xl">
             <BookingButton label="Termin buchen" />
           </div>
@@ -136,7 +136,7 @@ export default function PreisePage() {
 
       {/* 4. Kombi-Paket */}
       <section id="kombi-paket" className="bg-rose/25 py-16 md:py-20">
-        <div className="mx-auto w-full max-w-[1240px] px-6 sm:px-[2cm]">
+        <div className="mx-auto w-full max-w-[1240px] px-[calc(1.5rem+1cm)] sm:px-[3cm]">
           <div className="max-w-xl">
             <Reveal>
               <span className="eyebrow">Kombi-Paket</span>

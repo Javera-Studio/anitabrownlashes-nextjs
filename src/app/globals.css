@@ -225,9 +225,9 @@ body {
    Die komplette Section (Hintergrund, Bild, Zitat, Linien) bewegt sich als
    ein Block seitlich in die finale Position. */
 [data-reveal].section-slide-left {
-  opacity: 0.75;
-  transform: translateX(-9vw);
-  transition-duration: 1100ms;
+  opacity: 0.4;
+  transform: translateX(-100%);
+  transition-duration: 1500ms;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -237,9 +237,9 @@ body {
 }
 
 [data-reveal].section-slide-right {
-  opacity: 0.75;
-  transform: translateX(9vw);
-  transition-duration: 1100ms;
+  opacity: 0.4;
+  transform: translateX(100%);
+  transition-duration: 1500ms;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -250,21 +250,21 @@ body {
 
 @media (max-width: 639.98px) {
   [data-reveal].section-slide-left {
-    transform: translateX(-30px);
-    transition-duration: 820ms;
+    transform: translateX(-70px);
+    transition-duration: 1000ms;
   }
 
   [data-reveal].section-slide-right {
-    transform: translateX(30px);
-    transition-duration: 820ms;
+    transform: translateX(70px);
+    transition-duration: 1000ms;
   }
 }
 
 /* Preiszeilen (/preise): jede Zeile schiebt sich einzeln, dezent von
    links ein, waehrend Tabellenbreite und Spalten unveraendert bleiben. */
 [data-reveal].price-row-reveal {
-  transform: translateX(-30px);
-  transition-duration: 580ms;
+  transform: translateX(-55px);
+  transition-duration: 950ms;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -274,8 +274,8 @@ body {
 
 @media (max-width: 639.98px) {
   [data-reveal].price-row-reveal {
-    transform: translateX(-18px);
-    transition-duration: 480ms;
+    transform: translateX(-32px);
+    transition-duration: 680ms;
   }
 }
 
