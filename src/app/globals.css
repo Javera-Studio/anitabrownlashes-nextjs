@@ -223,40 +223,62 @@ body {
 
 /* Section-Slide-Reveal: NUR für die beiden grossen Portrait-Zitat-Sections.
    Die komplette Section (Hintergrund, Bild, Zitat, Linien) bewegt sich als
-   ein Block seitlich in die finale Position. */
-[data-reveal].section-slide-left {
-  opacity: 0.4;
-  transform: translateX(-100%);
-  transition-duration: 1500ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+   ein Block seitlich in die finale Position.
+   WICHTIG: [data-reveal] selbst (reveal-passthrough) bleibt UNTRANSFORMIERT
+   und dient nur der Sichtbarkeits-Erkennung – der translateX-Versatz liegt
+   auf einem Kind-Element. Ein Transform direkt auf dem beobachteten Element
+   würde dessen Bounding-Box aus dem Viewport schieben, wodurch der
+   IntersectionObserver "is-visible" nie ausloesen würde. */
+[data-reveal].reveal-passthrough {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
-[data-reveal].section-slide-left.is-visible {
+.reveal-passthrough .section-slide-left {
+  opacity: 0.4;
+  transform: translateX(-100%);
+  transition:
+    opacity 1500ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-passthrough.is-visible .section-slide-left {
   opacity: 1;
   transform: translateX(0);
 }
 
-[data-reveal].section-slide-right {
+.reveal-passthrough .section-slide-right {
   opacity: 0.4;
   transform: translateX(100%);
-  transition-duration: 1500ms;
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition:
+    opacity 1500ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-reveal].section-slide-right.is-visible {
+.reveal-passthrough.is-visible .section-slide-right {
   opacity: 1;
   transform: translateX(0);
 }
 
 @media (max-width: 639.98px) {
-  [data-reveal].section-slide-left {
+  .reveal-passthrough .section-slide-left {
     transform: translateX(-70px);
     transition-duration: 1000ms;
   }
 
-  [data-reveal].section-slide-right {
+  .reveal-passthrough .section-slide-right {
     transform: translateX(70px);
     transition-duration: 1000ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-passthrough .section-slide-left,
+  .reveal-passthrough .section-slide-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
@@ -264,7 +286,7 @@ body {
    links ein, waehrend Tabellenbreite und Spalten unveraendert bleiben. */
 [data-reveal].price-row-reveal {
   transform: translateX(-55px);
-  transition-duration: 950ms;
+  transition-duration: 1900ms;
   transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -275,7 +297,7 @@ body {
 @media (max-width: 639.98px) {
   [data-reveal].price-row-reveal {
     transform: translateX(-32px);
-    transition-duration: 680ms;
+    transition-duration: 1360ms;
   }
 }
 
