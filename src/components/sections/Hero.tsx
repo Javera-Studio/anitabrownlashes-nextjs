@@ -12,7 +12,7 @@ const trustItems = [
 export function Hero() {
   return (
     <section id="top" className="relative">
-      <div className="relative flex h-[100svh] min-h-[680px] w-full flex-col overflow-hidden bg-ink max-sm:min-h-[850px]">
+      <div className="relative flex h-[100svh] min-h-[680px] w-full flex-col overflow-hidden bg-ink max-sm:h-auto max-sm:min-h-0">
         {/*
           Bild-Wrapper: Desktop/Tablet unverändert (absolute inset-0 = full-bleed
           Hintergrund wie bisher). Mobile bekommt eine eigene, deutlich kürzere
@@ -85,7 +85,7 @@ export function Hero() {
         {/* Textblock: Desktop/Tablet unverändert (transparent, liegt auf dem Bild).
             Mobile: Eyebrow + Headline sind ausgeblendet (liegen bereits im Bild-Wrapper oben),
             hier bleiben nur Beschreibung + Bewertung im Ink-Block. */}
-        <div className="relative z-10 flex flex-1 justify-center px-6 max-sm:bg-ink max-sm:pt-7 max-sm:pb-10">
+        <div className="relative z-10 flex flex-1 justify-center px-6 max-sm:bg-ink max-sm:pt-7 max-sm:pb-14">
           <div className="-mt-[1cm] w-full max-w-[820px] text-center text-white max-sm:mt-0">
             <Reveal duration={1400} className="max-sm:hidden">
               <span className="inline-flex items-center gap-3 text-xs">
@@ -128,17 +128,27 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="h-8 shrink-0 sm:h-10 lg:h-14" aria-hidden />
+        <div className="h-8 shrink-0 sm:h-10 lg:h-14 max-sm:h-6" aria-hidden />
       </div>
 
       <div className="bg-white pb-[26px] pt-0 md:pb-10 lg:pb-12">
         <div className="container-studio">
-          <ul className="relative z-20 -mt-[1.575rem] grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-[2.7rem] lg:-mt-[3.6rem] lg:grid-cols-4 lg:gap-5">
+          <ul className="relative z-20 -mt-[1.575rem] grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-[2.7rem] lg:-mt-[3.6rem] lg:grid-cols-4 lg:gap-5 max-sm:-mt-8 max-sm:grid-cols-1 max-sm:gap-4">
             {trustItems.map((item, i) => (
-              <Reveal key={item.title} delay={i * 100}>
-                <li className="flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)]">
-                  <p className="text-sm font-semibold tracking-wide text-ink">{item.title}</p>
-                  <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft">{item.text}</p>
+              <Reveal
+                key={item.title}
+                delay={i * 100}
+                className="usp-card-reveal max-sm:mx-auto max-sm:w-[85vw] max-sm:max-w-[360px]"
+              >
+                <li
+                  className={`flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] max-sm:min-h-0 max-sm:px-5 max-sm:py-3.5 ${
+                    i % 2 === 1 ? "max-sm:translate-x-1" : "max-sm:-translate-x-1"
+                  }`}
+                >
+                  <p className="text-sm font-semibold tracking-wide text-ink max-sm:text-[0.82rem]">{item.title}</p>
+                  <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft max-sm:mt-1 max-sm:text-[0.76rem] max-sm:leading-snug">
+                    {item.text}
+                  </p>
                 </li>
               </Reveal>
             ))}

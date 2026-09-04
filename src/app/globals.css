@@ -140,6 +140,34 @@ body {
   }
 }
 
+/* USP-Karten (Startseite, Hero): eigener, etwas weicherer/hochwertigerer
+   Scroll-Einfahr-Effekt, nur auf Mobile aktiv – Desktop/Tablet nutzen
+   weiterhin den Standard-Reveal oben unverändert. */
+@media (max-width: 639.98px) {
+  [data-reveal].usp-card-reveal {
+    transform: translateY(64px);
+    transition-duration: 620ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-reveal].usp-card-reveal.is-visible {
+    transform: translateY(0);
+  }
+}
+
+/* Preis-Kategorie-Karten (/preise, Hero): sehr dezentes Fade-up, nur auf
+   Mobile aktiv – Desktop/Tablet bleiben ohne Animation unverändert. */
+@media (max-width: 639.98px) {
+  [data-reveal].price-card-reveal {
+    transform: translateY(26px);
+    transition-duration: 550ms;
+  }
+
+  [data-reveal].price-card-reveal.is-visible {
+    transform: translateY(0);
+  }
+}
+
 #leistungen,
 #ueber-anita,
 #ergebnisse,

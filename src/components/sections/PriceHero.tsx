@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { priceJumpLinks } from "@/lib/data/priceList";
 import { AiLabel } from "@/components/ui/AiLabel";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function PriceHero() {
   return (
@@ -41,17 +42,18 @@ export function PriceHero() {
         <div className="container-studio">
           <nav
             aria-label="Sprungnavigation Preisliste"
-            className="relative z-20 -mt-7 grid grid-cols-2 gap-4 sm:grid-cols-2 md:-mt-12 lg:-mt-16 lg:grid-cols-4 lg:gap-5"
+            className="relative z-20 -mt-7 grid grid-cols-2 gap-4 sm:grid-cols-2 sm:-mt-7 md:-mt-12 lg:-mt-16 lg:grid-cols-4 lg:gap-5 max-sm:-mt-16 max-sm:gap-3"
           >
-            {priceJumpLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="flex h-full min-h-[112px] flex-col items-center justify-center border border-ink/15 bg-white px-6 py-5 text-center shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] transition-colors hover:border-orchid/50"
-              >
-                <span className="text-sm font-semibold tracking-wide text-ink">{link.label}</span>
-                <span className="mt-1.5 text-xs text-orchid">Preise ansehen</span>
-              </a>
+            {priceJumpLinks.map((link, i) => (
+              <Reveal key={link.href} delay={i * 90} className="price-card-reveal h-full">
+                <a
+                  href={link.href}
+                  className="flex h-full min-h-[112px] flex-col items-center justify-center border border-ink/15 bg-white px-6 py-5 text-center shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] transition-colors hover:border-orchid/50 max-sm:min-h-[92px] max-sm:px-4 max-sm:py-4"
+                >
+                  <span className="text-sm font-semibold tracking-wide text-ink max-sm:text-[0.82rem]">{link.label}</span>
+                  <span className="mt-1.5 text-xs text-orchid">Preise ansehen</span>
+                </a>
+              </Reveal>
             ))}
           </nav>
         </div>
