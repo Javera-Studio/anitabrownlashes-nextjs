@@ -32,11 +32,44 @@ export function Hero() {
             className="object-cover"
           />
           <AiLabel />
+
+          {/* Mobile-only: weicher dunkler Verlauf am unteren Bildrand, geht nahtlos
+              in den bg-ink Hintergrund darunter über (kein harter Bild/Text-Schnitt mehr). */}
+          <div
+            className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[210px] max-sm:block"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(22,18,26,0) 0%, rgba(22,18,26,0.5) 52%, rgba(22,18,26,0.88) 78%, #16121a 100%)",
+            }}
+            aria-hidden
+          />
+
+          {/* Mobile-only: Eyebrow + Headline liegen jetzt im unteren, dunkel
+              verlaufenden Bildbereich, statt in der separaten Ink-Section darunter. */}
+          <div className="absolute inset-x-0 bottom-0 z-10 hidden px-6 pb-5 text-center text-white max-sm:block">
+            <Reveal duration={1400}>
+              <span className="inline-flex items-center gap-3 text-xs">
+                <span className="h-px w-8 bg-white/70" />
+                <span className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/90">
+                  Lash &amp; Brow Studio · Wien 1010
+                </span>
+                <span className="h-px w-8 bg-white/70" />
+              </span>
+            </Reveal>
+
+            <Reveal delay={240} duration={1400}>
+              <h1
+                className="mt-4 font-serif text-[2.47rem] leading-[1.1] tracking-[0.01em] text-balance"
+                style={{ textShadow: "0 2px 18px rgba(0,0,0,0.22)" }}
+              >
+                Ein Blick, der <em className="text-accent-on-dark not-italic">bleibt</em>.
+              </h1>
+            </Reveal>
+          </div>
         </div>
 
         {/* Vertical overlay: transparent/light on top and middle, warm dark only in the lower third.
-            Nur Desktop/Tablet – auf Mobile liegt der Text nicht mehr auf dem Bild, sondern in einem
-            eigenen, blickdichten Textblock darunter (siehe unten). */}
+            Nur Desktop/Tablet – Mobile hat einen eigenen Verlauf im Bild-Wrapper oben. */}
         <div
           className="pointer-events-none absolute inset-0 max-sm:hidden"
           style={{
@@ -50,10 +83,11 @@ export function Hero() {
         <div className="basis-[54%] shrink-0 sm:basis-[57%] lg:basis-[60%] max-sm:hidden" aria-hidden />
 
         {/* Textblock: Desktop/Tablet unverändert (transparent, liegt auf dem Bild).
-            Mobile: eigener blickdichter Ink-Block unterhalb des Bildes, mehr Abstand nach oben/unten. */}
-        <div className="relative z-10 flex flex-1 justify-center px-6 max-sm:bg-ink max-sm:pt-14 max-sm:pb-10">
+            Mobile: Eyebrow + Headline sind ausgeblendet (liegen bereits im Bild-Wrapper oben),
+            hier bleiben nur Beschreibung + Bewertung im Ink-Block. */}
+        <div className="relative z-10 flex flex-1 justify-center px-6 max-sm:bg-ink max-sm:pt-7 max-sm:pb-10">
           <div className="-mt-[1cm] w-full max-w-[820px] text-center text-white max-sm:mt-0">
-            <Reveal duration={1400}>
+            <Reveal duration={1400} className="max-sm:hidden">
               <span className="inline-flex items-center gap-3 text-xs">
                 <span className="h-px w-8 bg-white/70" />
                 <span className="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-white/90">
@@ -63,7 +97,7 @@ export function Hero() {
               </span>
             </Reveal>
 
-            <Reveal delay={240} duration={1400}>
+            <Reveal delay={240} duration={1400} className="max-sm:hidden">
               <h1 className="mt-5 font-serif text-[2.47rem] leading-[1.1] tracking-[0.01em] text-balance sm:text-[2.9rem] md:text-[3.4rem] lg:whitespace-nowrap lg:text-[3.9rem] xl:text-[4.25rem]"
                   style={{ textShadow: "0 2px 18px rgba(0,0,0,0.22)" }}>
                 Ein Blick, der <em className="text-accent-on-dark not-italic">bleibt</em>.
@@ -71,7 +105,7 @@ export function Hero() {
             </Reveal>
 
             <Reveal delay={480} duration={1400}>
-              <p className="mx-auto mt-5 max-w-[620px] text-[1.15rem] leading-[1.5] text-white/90 md:text-[1.35rem]">
+              <p className="mx-auto mt-5 max-w-[620px] text-[1.15rem] leading-[1.5] text-white/90 max-sm:mt-0 md:text-[1.35rem]">
                 Wimpernverlängerung, Lash &amp; Brow Lifting in Wien – individuell
                 abgestimmt und mit über 6 Jahren Erfahrung.
               </p>
