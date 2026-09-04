@@ -140,11 +140,7 @@ export function Hero() {
                 delay={i * 100}
                 className="usp-card-reveal max-sm:mx-auto max-sm:w-[85vw] max-sm:max-w-[360px]"
               >
-                <li
-                  className={`flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] max-sm:min-h-0 max-sm:px-5 max-sm:py-3.5 ${
-                    i % 2 === 1 ? "max-sm:translate-x-1" : "max-sm:-translate-x-1"
-                  }`}
-                >
+                <li className="flex h-full min-h-[112px] flex-col justify-center border border-ink/15 bg-white px-6 py-5 shadow-[0_10px_28px_-16px_rgba(0,0,0,0.3)] max-sm:min-h-[100px] max-sm:px-5 max-sm:py-3.5">
                   <p className="text-sm font-semibold tracking-wide text-ink max-sm:text-[0.82rem]">{item.title}</p>
                   <p className="mt-1.5 text-[0.85rem] leading-relaxed text-ink-soft max-sm:mt-1 max-sm:text-[0.76rem] max-sm:leading-snug">
                     {item.text}
