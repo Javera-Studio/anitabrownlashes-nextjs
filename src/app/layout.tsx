@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       "Wimpernverlängerung, Lash Lifting und Brow Lifting im Herzen Wiens – individuell, hochwertig und persönlich.",
     images: [
       {
-        url: "/images/hero-eye.jpg",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Anita Brows & Lashes – Wimpernstudio in Wien",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Anita Brows & Lashes | Wien 1010",
     description:
       "Wimpernverlängerung, Lash Lifting und Brow Lifting – individuell, hochwertig und persönlich.",
-    images: ["/images/hero-eye.jpg"],
+    images: ["/images/og-image.jpg"],
   },
   alternates: {
     canonical: siteUrl,
