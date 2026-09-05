@@ -32,7 +32,7 @@ export function PriceHero() {
           </h1>
 
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-            Finden Sie hier alle Preise für Wimpernverlängerung, Lash Lifting, Brow
+            Finde hier alle Preise für Wimpernverlängerung, Lash Lifting, Brow
             Lifting und Augenbrauenbehandlungen im Überblick.
           </p>
         </div>

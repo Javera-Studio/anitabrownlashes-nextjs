@@ -31,7 +31,9 @@ export function Gallery() {
             <Reveal
               key={img.src}
               delay={(i % 3) * 120}
-              className="relative aspect-[3/4] overflow-hidden bg-lilac/40"
+              className={`relative aspect-[3/4] overflow-hidden bg-lilac/40 ${
+                i === 0 ? "max-sm:col-span-2 max-sm:aspect-square" : ""
+              }`}
             >
               <Image
                 src={img.src}

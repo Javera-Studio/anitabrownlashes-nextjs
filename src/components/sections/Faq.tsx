@@ -18,8 +18,8 @@ export function Faq() {
               Häufig gestellte <em className="text-orchid not-italic">Fragen</em>.
             </h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-ink-soft">
-              Antworten auf die häufigsten Fragen rund um meine Behandlungen. Ihre
-              Frage ist nicht dabei? Ich berate Sie gerne persönlich.
+              Antworten auf die häufigsten Fragen rund um meine Behandlungen. Deine
+              Frage ist nicht dabei? Ich berate dich gerne persönlich.
             </p>
           </Reveal>
 
@@ -76,7 +76,7 @@ export function Faq() {
 
         <Reveal delay={200} className="mt-16 flex flex-col items-center gap-5 text-center">
           <p className="font-serif text-xl italic text-ink">
-            Ihre Frage wurde nicht beantwortet?
+            Deine Frage wurde nicht beantwortet?
           </p>
           <a
             href={business.whatsapp}

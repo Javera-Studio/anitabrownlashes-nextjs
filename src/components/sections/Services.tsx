@@ -18,7 +18,7 @@ export function Services() {
           <Reveal delay={100} className="lg:col-span-5">
             <p className="text-base leading-relaxed text-ink-soft md:text-lg">
               Ob natürlich elegant oder ausdrucksstark – jede Behandlung wird individuell
-              auf Ihre Wünsche und Gesichtsform abgestimmt. Präzision, hochwertige
+              auf deine Wünsche und Gesichtsform abgestimmt. Präzision, hochwertige
               Produkte und ein natürlich schönes Ergebnis stehen dabei stets im
               Mittelpunkt.
             </p>

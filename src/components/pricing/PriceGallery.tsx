@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "@/components/ui/Reveal";
 
 export interface PriceGalleryImage {
   src: string;
@@ -32,8 +33,12 @@ export function PriceGallery({ images }: PriceGalleryProps) {
       {/* Mobile: kompaktes 2x2 */}
       <div className="container-studio md:hidden">
         <div className="grid grid-cols-2 gap-[15px]">
-          {tiles.map((img) => (
-            <div key={img.src} className="group relative aspect-square overflow-hidden">
+          {tiles.map((img, i) => (
+            <Reveal
+              key={img.src}
+              delay={i * 100}
+              className="price-gallery-reveal group relative aspect-square overflow-hidden"
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -43,14 +48,14 @@ export function PriceGallery({ images }: PriceGalleryProps) {
                 style={{ objectPosition: img.focus ?? DEFAULT_FOCUS }}
                 className={imgClass}
               />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
 
       {/* Desktop: asymmetrisches Editorial-Layout, kompakt und mittig */}
       <div className="hidden gap-[24px] md:mx-auto md:grid md:w-[62vw] md:max-w-[1180px] md:grid-cols-[1.7fr_1fr]">
-        <div className="group relative aspect-[4/5] overflow-hidden">
+        <Reveal className="price-gallery-reveal group relative aspect-[4/5] overflow-hidden">
           <Image
             src={lead.src}
             alt={lead.alt}
@@ -60,10 +65,14 @@ export function PriceGallery({ images }: PriceGalleryProps) {
             style={{ objectPosition: lead.focus ?? DEFAULT_FOCUS }}
             className={imgClass}
           />
-        </div>
+        </Reveal>
         <div className="grid h-full grid-rows-3 gap-[24px]">
-          {secondary.map((img) => (
-            <div key={img.src} className="group relative overflow-hidden">
+          {secondary.map((img, i) => (
+            <Reveal
+              key={img.src}
+              delay={(i + 1) * 100}
+              className="price-gallery-reveal group relative overflow-hidden"
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -73,7 +82,7 @@ export function PriceGallery({ images }: PriceGalleryProps) {
                 style={{ objectPosition: img.focus ?? DEFAULT_FOCUS }}
                 className={imgClass}
               />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

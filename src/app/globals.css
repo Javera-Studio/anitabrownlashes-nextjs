@@ -301,6 +301,18 @@ body {
   }
 }
 
+/* Preis-Ergebnisgalerien (/preise): Bilder fliegen beim Scrollen einzeln
+   aus dem unteren Bildbereich in ihre finale Position. */
+[data-reveal].price-gallery-reveal {
+  transform: translateY(42px);
+  transition-duration: 750ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].price-gallery-reveal.is-visible {
+  transform: translateY(0);
+}
+
 #leistungen,
 #ueber-anita,
 #ergebnisse,

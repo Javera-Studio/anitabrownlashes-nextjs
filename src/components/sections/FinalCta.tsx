@@ -8,7 +8,7 @@ export function FinalCta() {
       <div className="container-studio">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-ink sm:text-5xl">
-            Bereit für Ihren nächsten{" "}
+            Bereit für deinen nächsten{" "}
             <em className="text-orchid not-italic">Blick</em>?
           </h2>
           <p className="mx-auto mt-5 max-w-md text-base leading-relaxed text-ink-soft">

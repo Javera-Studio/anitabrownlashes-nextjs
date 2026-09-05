@@ -8,7 +8,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Wie lange hält eine Wimpernverlängerung?",
     answer:
-      "Je nach Wachstum Ihrer Naturwimpern empfehle ich eine Auffüllung alle 2 bis 4 Wochen. Nach etwa 5 Wochen wird in der Regel ein neues Set benötigt.",
+      "Je nach Wachstum deiner Naturwimpern empfehle ich eine Auffüllung alle 2 bis 4 Wochen. Nach etwa 5 Wochen wird in der Regel ein neues Set benötigt.",
     category: "wimpern",
   },
   {
@@ -68,11 +68,11 @@ export const faqItems: FaqItem[] = [
   {
     question: "Wie lange dauert eine Behandlung?",
     answer:
-      "Je nach Behandlung dauert Ihr Termin zwischen 60 Minuten und etwa 3 Stunden. Die genaue Dauer richtet sich nach der gewählten Behandlung.",
+      "Je nach Behandlung dauert dein Termin zwischen 60 Minuten und etwa 3 Stunden. Die genaue Dauer richtet sich nach der gewählten Behandlung.",
     category: "allgemein",
   },
   {
-    question: "Arbeiten Sie mit hochwertigen Produkten?",
+    question: "Arbeitest du mit hochwertigen Produkten?",
     answer:
       "Ja, ich verwende für alle Behandlungen ausschließlich hochwertige und professionelle Produkte, um beste Qualität und langanhaltende Ergebnisse zu gewährleisten.",
     category: "allgemein",
@@ -80,13 +80,13 @@ export const faqItems: FaqItem[] = [
   {
     question: "Muss ich vor meinem Termin etwas beachten?",
     answer:
-      "Bitte erscheinen Sie möglichst ohne Augen-Make-up zu Ihrem Termin. So kann die Behandlung optimal vorbereitet und durchgeführt werden.",
+      "Bitte erscheine möglichst ohne Augen-Make-up zu deinem Termin. So kann die Behandlung optimal vorbereitet und durchgeführt werden.",
     category: "allgemein",
   },
   {
     question: "Kann ich mich vor der Behandlung beraten lassen?",
     answer:
-      "Natürlich. Vor jeder Behandlung nehme ich mir Zeit für eine persönliche Beratung, um gemeinsam den Look zu finden, der am besten zu Ihnen passt.",
+      "Natürlich. Vor jeder Behandlung nehme ich mir Zeit für eine persönliche Beratung, um gemeinsam den Look zu finden, der am besten zu dir passt.",
     category: "allgemein",
   },
 ];

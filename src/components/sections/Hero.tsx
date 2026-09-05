@@ -5,7 +5,7 @@ import { AiLabel } from "@/components/ui/AiLabel";
 const trustItems = [
   { title: "6 Jahre Erfahrung", text: "Langjährige Expertise in Lash- & Brow-Styling." },
   { title: "Premium-Produkte", text: "Ausschließlich hochwertige, ausgewählte Produkte." },
-  { title: "Persönliche Beratung", text: "Individuell abgestimmt auf Ihre Wünsche." },
+  { title: "Persönliche Beratung", text: "Individuell abgestimmt auf deine Wünsche." },
   { title: "Studio im 1. Bezirk", text: "Zentrale Lage im Herzen Wiens." },
 ];
 

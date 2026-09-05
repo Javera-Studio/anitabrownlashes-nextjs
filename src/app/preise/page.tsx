@@ -85,7 +85,7 @@ export default function PreisePage() {
             <Reveal>
               <span className="eyebrow">Lash Lifting</span>
               <h2 className="mt-4 font-serif text-3xl leading-[1.15] tracking-[0.01em] text-ink sm:text-4xl">
-                Natürlicher Schwung für Ihre Wimpern.
+                Natürlicher Schwung für deine Wimpern.
               </h2>
             </Reveal>
           </div>

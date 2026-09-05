@@ -9,7 +9,7 @@ export function Instagram() {
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="text-center lg:col-span-7 lg:text-left">
             <Reveal>
-              <span className="eyebrow">Folgen Sie mir</span>
+              <span className="eyebrow">Folge mir</span>
               <h2 className="mt-5 font-serif text-[2.4rem] leading-[1.08] tracking-[0.01em] text-ink sm:text-5xl lg:text-[3.4rem]">
                 Neue Looks,
                 <br />
@@ -19,7 +19,7 @@ export function Instagram() {
             <Reveal delay={120}>
               <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-ink-soft lg:mx-0">
                 Aktuelle Arbeiten, Behind-the-Scenes aus dem Studio und Inspiration
-                für Ihren nächsten Termin – auf Instagram teile ich regelmäßig
+                für deinen nächsten Termin – auf Instagram teile ich regelmäßig
                 Einblicke.
               </p>
             </Reveal>

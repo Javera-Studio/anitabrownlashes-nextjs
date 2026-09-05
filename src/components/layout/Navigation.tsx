@@ -40,7 +40,7 @@ export function Navigation() {
         solid ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
       }`}
     >
-      <div className="container-studio flex h-20 items-center justify-between md:h-[92px]">
+      <div className="container-studio flex h-20 items-center justify-between md:h-[92px] lg:h-28">
         <Link
           href={isHome ? "#top" : "/"}
           aria-label="Anita Brows &amp; Lashes – Startseite"
@@ -52,7 +52,7 @@ export function Navigation() {
             width={64}
             height={64}
             priority
-            className="h-[53px] w-[53px] object-contain sm:h-[67px] sm:w-[67px] lg:h-[77px] lg:w-[77px]"
+            className="h-[53px] w-[53px] object-contain sm:h-[67px] sm:w-[67px] lg:h-[92px] lg:w-[92px]"
           />
         </Link>
 

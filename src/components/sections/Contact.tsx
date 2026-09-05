@@ -6,14 +6,14 @@ export function Contact() {
     <section id="kontakt" className="bg-ink py-24 text-white md:py-32">
       <div className="container-studio">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow text-rose">Ihr Besuch</span>
+          <span className="eyebrow text-rose">Dein Besuch</span>
           <h2 className="mt-5 font-serif text-[2.3rem] leading-[1.1] tracking-[0.01em] text-white sm:text-5xl">
             Schönheit beginnt mit{" "}
             <em className="text-accent-on-dark not-italic">einem Termin</em>.
           </h2>
           <p className="mt-5 text-base leading-relaxed text-white/70">
-            Ob Wimpern oder Brows – ich nehme mir Zeit für Ihre Wünsche und freue
-            mich darauf, Sie bald in meinem Studio willkommen zu heißen.
+            Ob Wimpern oder Brows – ich nehme mir Zeit für deine Wünsche und freue
+            mich darauf, dich bald in meinem Studio willkommen zu heißen.
           </p>
         </Reveal>
 
